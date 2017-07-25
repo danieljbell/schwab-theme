@@ -1,0 +1,73 @@
+.schwab-cover {
+  overflow: hidden;
+  min-height: 600px;
+  background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/447479_original.png?1490126381);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -250px -100px;
+  @include bp(sm) {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-size: 1190px;
+    background-position: -75px -140px;
+  }
+}
+
+// .schwab-cover-bg {
+//   position: absolute;
+//   z-index: -1;
+//   left: 0;
+//   top: -100px;
+//   width: calc(100% + 10vw);
+// }
+
+.schwab-logo {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  position: relative;
+  left: 25px;
+  margin-bottom: 15px;
+}
+
+.schwab-logo-tagline {
+  display: block;
+  width: 100%;
+  max-width: 200px; 
+}
+
+.schwab-cover-content-container {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 375px;
+}
+.schwab-cover-content-container h1 {
+  margin-bottom: 0.5em !important;
+  line-height: 1 !important;
+}
+.schwab-cover-content-container h2 {
+  margin-bottom: 20px;
+}
+
+.schwab-workgroup-label {
+  text-align: right;
+}
+
+.schwab-brand-box {
+  color: #fff !important;
+  position: relative;
+  padding: 20px;
+}
+
+.schwab-brand-box:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  content: '';
+  background-color: #005f83;
+  mix-blend-mode: multiply;
+}
+
