@@ -1,0 +1,72 @@
+%box {
+  position: relative;
+  padding: 20px;
+  z-index: 0;
+  color: #fff !important;
+  * {
+    color: #fff !important;
+  }
+}
+
+%box:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  content: '';
+}
+
+.brand-box {
+  @extend %box;
+  &:after {
+    background-color: $brand;
+  }
+}
+
+.brand-box-multiply {
+  @extend %box;
+  &:after {
+    @extend %box:after;
+    background-color: #005f83;
+    mix-blend-mode: multiply;
+  }
+}
+
+.light-gray-box {
+  @extend %box;
+  * {
+    color: $brand-font-color !important;
+  }
+  &:after {
+    background-color: $light-gray;
+  }
+  & [class*="-box"] {
+    color: #fff !important;
+  }
+}
+
+.brand-two-box {
+  @extend %box;
+  &:after {
+    background-color: $brand-two;
+  }
+}
+
+.brand-three-box {
+  @extend %box;
+  &:after {
+    background-color: $brand-three;
+  }
+}
+
+
+/*
+==============================
+SCHWAB BOX DEFAULTS
+==============================
+*/
+[class*='-box'] {
+  padding-bottom: 55%;
+}

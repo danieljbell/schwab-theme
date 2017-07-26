@@ -4,7 +4,7 @@ BREAKPOINTS
 ========================
 */
 $breakpoints: (
-  sm: 600px,
+  sm: 568px,
 ) !default;
 
 
@@ -15,7 +15,7 @@ CREATE MEDIA QUERY
 */ 
 @mixin bp($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
       @content;
     }
   }

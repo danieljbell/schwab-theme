@@ -12,7 +12,7 @@ body {
 
 .page {
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 30px;
   width: calc(100% - 2rem);
   max-width: 816px;
   margin: 0 auto 100px;
@@ -31,4 +31,18 @@ body {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.doc-links {
+  position: fixed;
+  list-style-type: none;
+  width: 100%;
+  max-width: 200px;
+}
+
+.doc-links a {
+  color: #ccc;
+  text-decoration: none;
+  border-bottom: 1px solid #777;
+  display: block;
 }

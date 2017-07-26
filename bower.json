@@ -1,0 +1,21 @@
+{
+  "name": "client-theme-template",
+  "description": "Starter files for a client theme",
+  "main": "index.js",
+  "authors": [
+    "Daniel Bell"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/danieljbell/client-theme-template",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gridism": "~0.2.2"
+  }
+}

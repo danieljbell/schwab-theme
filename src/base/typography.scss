@@ -4,3 +4,69 @@
   font-weight: 300;
   color: $brand;
 }
+
+#content_editor h3,
+.pdf-page-content h3 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: $brand;
+}
+
+#content_editor ul,
+.pdf-page-content ul {
+  font-size: 18px !important;
+  line-height: 1.3 !important;
+  padding-left: 1em !important;
+  list-style-type: square;
+}
+
+#content_editor ul > li,
+.pdf-page-content ul > li {
+  margin-bottom: 9px;
+}
+
+#content_editor blockquote > *,
+.pdf-page-content blockquote > * {
+  color: $brand;
+}
+
+#content_editor blockquote > p:first-child,
+.pdf-page-content blockquote > p:first-child {
+  position: relative;
+  &:before,
+  &:after {
+    content: '"';
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -0.5em;
+  }
+}
+
+#content_editor table th {
+  text-transform: uppercase;
+  text-align: left;
+  padding: 5px;
+}
+
+#content_editor hr,
+.pdf-page-content hr {
+  background-color: $brand-font-color;
+  border: 0;
+  height: 2px;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#content_editor ol.footnotes,
+.pdf-page-content ol.footnotes {
+  font-size: 0.55em;
+  line-height: 1.4 !important;
+  padding-left: 1em !important;
+  margin-top: 40px;
+  > li {
+    margin-bottom: 5px;
+  }
+}
