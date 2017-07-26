@@ -25,12 +25,21 @@
   }
 }
 
-.brand-box-multiply {
+.brand-box--lighten {
+  @extend %box;
+  color: $brand-font-color !important;
+  * {
+    color: $brand-font-color !important;
+  }
+  &:after {
+    background-color: lighten($brand, 40%);
+  }
+}
+
+.brand-box--multiply {
   @extend %box;
   &:after {
-    @extend %box:after;
-    background-color: #005f83;
-    mix-blend-mode: multiply;
+    background-color: darken(transparentize($brand-three, 0.15), 12%);
   }
 }
 
@@ -42,7 +51,9 @@
   &:after {
     background-color: $light-gray;
   }
-  & [class*="-box"] {
+  & .brand-box,
+  & .brand-two-box,
+  & .brand-box--multiply {
     color: #fff !important;
   }
 }
@@ -51,6 +62,20 @@
   @extend %box;
   &:after {
     background-color: $brand-two;
+  }
+  * {
+    color: #fff !important;
+  }
+}
+
+.brand-two-box--lighten {
+  @extend %box;
+  color: $brand-font-color !important;
+  &:after {
+    background-color: lighten($brand-two, 35%);
+  }
+  * {
+    color: $brand-font-color !important;
   }
 }
 

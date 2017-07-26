@@ -54,14 +54,21 @@ CREATE MEDIA QUERY
   width: 100%;
   margin-top: 1em;
   margin-bottom: 1em; }
-#content_editor ol.footnotes,
-.pdf-page-content ol.footnotes {
+#content_editor sup,
+.pdf-page-content sup {
+  font-size: 0.6em !important; }
+#content_editor .footnotes,
+.pdf-page-content .footnotes {
   font-size: 0.55em;
   line-height: 1.4 !important;
   padding-left: 1em !important;
   margin-top: 40px; }
-#content_editor ol.footnotes > li,
-  .pdf-page-content ol.footnotes > li {
+#content_editor .footnotes *,
+  .pdf-page-content .footnotes * {
+    font-size: 1em;
+    line-height: 1.4 !important; }
+#content_editor .footnotes > li,
+  .pdf-page-content .footnotes > li {
     margin-bottom: 5px; }
 /*
 ==============================
@@ -69,7 +76,8 @@ RESETS/OVERRIDES
 ==============================
 */
 .grid .unit,
-.grid .unit:first-child {
+.grid .unit:first-child,
+.grid .unit:last-child {
   padding: 0; }
 .grid .unit.half {
   padding-right: 20px; }
@@ -100,18 +108,18 @@ RESETS/OVERRIDES
 .light-callout {
   background-color: #e6e8ea; }
 .brand-three-callout {
-  background-color: #436daa;
+  background-color: #005f83;
   color: #fff !important; }
 .light-gray-box .brand-three-callout {
     color: #fff !important; }
-.brand-box, .brand-box-multiply, .light-gray-box, .brand-two-box, .brand-three-box {
+.brand-box, .brand-box--lighten, .brand-box--multiply, .light-gray-box, .brand-two-box, .brand-two-box--lighten, .brand-three-box {
   position: relative;
   padding: 20px;
   z-index: 0;
   color: #fff !important; }
-.brand-box *, .brand-box-multiply *, .light-gray-box *, .brand-two-box *, .brand-three-box * {
+.brand-box *, .brand-box--lighten *, .brand-box--multiply *, .light-gray-box *, .brand-two-box *, .brand-two-box--lighten *, .brand-three-box * {
     color: #fff !important; }
-.brand-box:after, .brand-box-multiply:after, .light-gray-box:after, .brand-two-box:after, .brand-three-box:after {
+.brand-box:after, .brand-box--lighten:after, .brand-box--multiply:after, .light-gray-box:after, .brand-two-box:after, .brand-two-box--lighten:after, .brand-three-box:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -121,19 +129,34 @@ RESETS/OVERRIDES
   content: ''; }
 .brand-box:after {
   background-color: #0ea0db; }
-.brand-box-multiply:after {
-  background-color: #005f83;
-  mix-blend-mode: multiply; }
+.brand-box--lighten {
+  color: #505050 !important; }
+.brand-box--lighten * {
+    color: #505050 !important; }
+.brand-box--lighten:after {
+    background-color: #bae8fb; }
+.brand-box--multiply:after {
+  background-color: rgba(0, 51, 70, 0.85); }
 .light-gray-box * {
   color: #505050 !important; }
 .light-gray-box:after {
   background-color: #e6e8ea; }
-.light-gray-box [class*="-box"] {
+.light-gray-box .brand-box,
+.light-gray-box .brand-two-box,
+.light-gray-box .brand-box--multiply {
   color: #fff !important; }
 .brand-two-box:after {
   background-color: #789d49; }
+.brand-two-box * {
+  color: #fff !important; }
+.brand-two-box--lighten {
+  color: #505050 !important; }
+.brand-two-box--lighten:after {
+    background-color: #cedfba; }
+.brand-two-box--lighten * {
+    color: #505050 !important; }
 .brand-three-box:after {
-  background-color: #436daa; }
+  background-color: #005f83; }
 /*
 ==============================
 SCHWAB BOX DEFAULTS
@@ -154,43 +177,61 @@ SCHWAB BOX DEFAULTS
 .schwab-cover {
   overflow: hidden;
   min-height: 600px;
-  background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/447479_original.png?1490126381);
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 40px;
   padding-right: 40px;
   background-size: 1190px;
   background-position: -75px -140px; }
+.schwab-cover-bg {
+  position: absolute;
+  z-index: -1;
+  width: calc(100% + 500px);
+  left: -200px;
+  top: -120px;
+  -webkit-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
 .schwab-logo {
   display: block;
   width: 100%;
-  max-width: 100px;
+  max-width: 100px !important;
   position: relative;
   left: 25px;
   margin-bottom: 15px; }
 .schwab-logo-tagline {
   display: block;
   width: 100%;
-  max-width: 200px; }
+  max-width: 200px !important;
+  margin-bottom: 5em; }
 .schwab-cover-content-container {
-  margin-top: 100px;
-  width: 100%;
-  max-width: 375px; }
+  margin-bottom: 4em; }
+.schwab-cover-content-container [class*="-box"] {
+  padding-bottom: 30%; }
 .schwab-cover-content-container h1 {
+  font-size: 2.5em !important;
   margin-bottom: 0.5em !important;
   line-height: 1 !important; }
 .schwab-cover-content-container h2 {
-  margin-bottom: 20px; }
+  font-size: 1.5em !important;
+  line-height: 1.2 !important;
+  margin-bottom: 20px !important; }
+.schwab-cover-content-container p {
+  font-size: 1.1em !important;
+  line-height: 1.4 !important; }
 .schwab-workgroup-label {
+  margin-top: 20px;
   text-align: right; }
-.no-bull {
+#content_editor .no-bull {
   list-style-type: none;
   margin-left: 0 !important;
   padding-left: 0 !important; }
 .brand-font-color {
   color: #0ea0db !important; }
 .brand-three-font-color {
-  color: #436daa !important; }
+  color: #005f83 !important; }
+.upcase {
+  text-transform: uppercase; }
 .mar-t {
   margin-top: 20px !important; }
 .mar-r {
@@ -203,6 +244,14 @@ SCHWAB BOX DEFAULTS
   margin-bottom: 20px !important; }
 .pad-a {
   padding: 0.5em !important; }
+.pad-t {
+  padding-top: 0.5em !important; }
+.pad-r {
+  padding-right: 0.5em !important; }
+.pad-b {
+  padding-bottom: 0.5em !important; }
+.pad-l {
+  padding-left: 0.5em !important; }
 .pos-rel {
   position: relative; }
 .pos-abs {
@@ -235,4 +284,16 @@ SCHWAB BOX DEFAULTS
     .schwab-cover {
       background-position: -250px -100px;
       padding-left: 20px;
-      padding-right: 20px; } }
+      padding-right: 20px; }
+    .schwab-cover-bg {
+      opacity: 0.35;
+      width: calc(100% + 780px);
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-54%, -55%);
+          -ms-transform: translate(-54%, -55%);
+              transform: translate(-54%, -55%); }
+    .schwab-cover-content-container {
+      margin-bottom: 2em; }
+    .schwab-workgroup-label {
+      text-align: center; } }

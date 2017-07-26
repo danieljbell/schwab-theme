@@ -60,12 +60,21 @@
   margin-bottom: 1em;
 }
 
-#content_editor ol.footnotes,
-.pdf-page-content ol.footnotes {
+#content_editor sup,
+.pdf-page-content sup {
+  font-size: 0.6em !important;
+}
+
+#content_editor .footnotes,
+.pdf-page-content .footnotes {
   font-size: 0.55em;
   line-height: 1.4 !important;
   padding-left: 1em !important;
   margin-top: 40px;
+  * {
+    font-size: 1em;
+    line-height: 1.4 !important;
+  }
   > li {
     margin-bottom: 5px;
   }

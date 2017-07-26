@@ -1,4 +1,4 @@
-.no-bull {
+#content_editor .no-bull {
   list-style-type: none;
   margin-left: 0 !important;
   padding-left: 0 !important;
@@ -10,6 +10,10 @@
 
 .brand-three-font-color {
   color: $brand-three !important;
+}
+
+.upcase {
+  text-transform: uppercase;
 }
 
 .mar-t {
@@ -33,6 +37,22 @@
 
 .pad-a {
   padding: 0.5em !important;
+}
+
+.pad-t {
+  padding-top: 0.5em !important;
+}
+
+.pad-r {
+  padding-right: 0.5em !important;
+}
+
+.pad-b {
+  padding-bottom: 0.5em !important;
+}
+
+.pad-l {
+  padding-left: 0.5em !important;
 }
 
 .pos-rel {

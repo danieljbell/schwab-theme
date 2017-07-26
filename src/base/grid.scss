@@ -11,7 +11,8 @@ RESETS/OVERRIDES
 }
 
 .grid .unit,
-.grid .unit:first-child {
+.grid .unit:first-child,
+.grid .unit:last-child {
   padding: 0;
 }
 

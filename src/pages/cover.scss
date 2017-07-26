@@ -1,7 +1,7 @@
 .schwab-cover {
   overflow: hidden;
   min-height: 600px;
-  background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/447479_original.png?1490126381);
+  // background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/447479_original.png?1490126381);
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 40px;
@@ -15,10 +15,26 @@
   }
 }
 
+.schwab-cover-bg {
+  position: absolute;
+  z-index: -1;
+  width: calc(100% + 500px);
+  left: -200px;
+  top: -120px;
+  transition: all 200ms ease-out;
+  @include bp(sm) {
+    opacity: 0.35;
+    width: calc(100% + 780px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-54%, -55%);
+  }
+}
+
 .schwab-logo {
   display: block;
   width: 100%;
-  max-width: 100px;
+  max-width: 100px !important;
   position: relative;
   left: 25px;
   margin-bottom: 15px;
@@ -27,22 +43,40 @@
 .schwab-logo-tagline {
   display: block;
   width: 100%;
-  max-width: 200px; 
+  max-width: 200px !important; 
+  margin-bottom: 5em;
 }
 
 .schwab-cover-content-container {
-  margin-top: 100px;
-  width: 100%;
-  max-width: 375px;
+  margin-bottom: 4em;
+  @include bp(sm) {
+    margin-bottom: 2em;
+  }
 }
+
+.schwab-cover-content-container [class*="-box"] {
+  padding-bottom: 30%;
+}
+
 .schwab-cover-content-container h1 {
+  font-size: 2.5em !important;
   margin-bottom: 0.5em !important;
   line-height: 1 !important;
 }
 .schwab-cover-content-container h2 {
-  margin-bottom: 20px;
+  font-size: 1.5em !important;
+  line-height: 1.2 !important;
+  margin-bottom: 20px !important;
+}
+.schwab-cover-content-container p {
+  font-size: 1.1em !important;
+  line-height: 1.4 !important;
 }
 
 .schwab-workgroup-label {
+  margin-top: 20px;
   text-align: right;
+  @include bp(sm) {
+    text-align: center;
+  }
 }
