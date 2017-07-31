@@ -1,4 +1,5 @@
-.schwab-cover {
+#content_editor .schwab-cover,
+.pdf-page-content .schwab-cover {
   overflow: hidden;
   min-height: 600px;
   // background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/447479_original.png?1490126381);
@@ -14,24 +15,37 @@
     padding-right: 20px;
   }
 }
+.pdf-page-content .schwab-cover {
+  height: 9.5in;
+  padding: 0;
+}
 
-.schwab-cover-bg {
+#content_editor .schwab-cover-bg,
+.pdf-page-content .schwab-cover-bg {
   position: absolute;
   z-index: -1;
   width: calc(100% + 500px);
+  max-width: calc(100% + 500px) !important;
   left: -200px;
   top: -120px;
   transition: all 200ms ease-out;
   @include bp(sm) {
     opacity: 0.35;
     width: calc(100% + 780px);
+    max-width: calc(100% + 780px) !important;
     left: 50%;
     top: 50%;
-    transform: translate(-54%, -55%);
+    transform: translate(-54%, -66%);
   }
 }
+.pdf-page-content .schwab-cover-bg {
+  left: -3.5in;
+  width: 16in !important;
+  max-width: 16in !important;
+}
 
-.schwab-logo {
+#content_editor .schwab-logo,
+.pdf-page-content .schwab-logo {
   display: block;
   width: 100%;
   max-width: 100px !important;
@@ -40,43 +54,82 @@
   margin-bottom: 15px;
 }
 
-.schwab-logo-tagline {
+#content_editor .schwab-logo-tagline,
+.pdf-page-content .schwab-logo-tagline {
   display: block;
   width: 100%;
   max-width: 200px !important; 
   margin-bottom: 5em;
 }
+.pdf-page-content .schwab-logo-tagline {
+  margin-bottom: 2.75in;  
+}
 
-.schwab-cover-content-container {
+#content_editor .schwab-cover-content-container,
+.pdf-page-content .schwab-cover-content-container {
   margin-bottom: 4em;
   @include bp(sm) {
     margin-bottom: 2em;
   }
 }
 
-.schwab-cover-content-container [class*="-box"] {
+#content_editor .schwab-cover-content-container [class*="-box"],
+.pdf-page-content .schwab-cover-content-container [class*="-box"] {
   padding-bottom: 30%;
 }
 
-.schwab-cover-content-container h1 {
+#content_editor .schwab-cover-content-container h1,
+.pdf-page-content .schwab-cover-content-container h1 {
   font-size: 2.5em !important;
   margin-bottom: 0.5em !important;
   line-height: 1 !important;
 }
-.schwab-cover-content-container h2 {
+#content_editor .schwab-cover-content-container h2,
+.pdf-page-content .schwab-cover-content-container h2 {
   font-size: 1.5em !important;
   line-height: 1.2 !important;
   margin-bottom: 20px !important;
 }
-.schwab-cover-content-container p {
+#content_editor .schwab-cover-content-container p,
+.pdf-page-content .schwab-cover-content-container p {
   font-size: 1.1em !important;
   line-height: 1.4 !important;
 }
 
-.schwab-workgroup-label {
+#content_editor .schwab-workgroup-label,
+.pdf-page-content .schwab-workgroup-label {
   margin-top: 20px;
   text-align: right;
   @include bp(sm) {
     text-align: center;
+  }
+}
+
+
+/*
+==============================
+BACK COVER
+==============================
+*/
+#content_editor .schwab-back-cover,
+.pdf-page-content .schwab-back-cover {
+  > div:last-child {
+    padding-right: 30px;
+  }
+  img:first-child {
+      width: 100px;
+      left: 80px;
+      position: relative;
+  }
+  .pull-right {
+    @include bp(sm) {
+      float: none;
+      text-align: center;
+    }
+    > img {
+      @include bp(sm) {
+        margin: 20px auto 30px;
+      }
+    }
   }
 }

@@ -1,15 +1,29 @@
-.schwab-table {
+#content_editor .schwab-table,
+.pdf-page-content .schwab-table {
   border: 0px !important;
+  margin-bottom: 20px;
 }
 
-.schwab-table thead th {
+#content_editor .schwab-table thead th,
+.pdf-page-content .schwab-table thead th {
+  background-color: $brand-three !important;
+  color: #fff !important;
   padding: 5px 10px !important;
+  text-transform: uppercase;
 }
 
-.schwab-table tbody td {
+#content_editor .schwab-table tbody td,
+.pdf-page-content .schwab-table tbody td {
   background-color: #fff;
   padding: 10px !important;
   li {
     font-size: 0.75em !important;
   }
+}
+
+#content_editor .schwab-table img,
+.pdf-page-content .schwab-table img {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
 }

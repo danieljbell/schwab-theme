@@ -1,0 +1,159 @@
+#content_editor .schwab-graphic,
+.pdf-page-content .schwab-graphic {
+  margin-top: 3em;
+  display: flex;
+  align-items: center;
+  @include bp(md) {
+    flex-direction: column;
+  }
+  h6 {
+    font-size: 0.8em !important;
+  }
+  li, p {
+    font-size: 0.75em !important;
+  }
+  > * {
+    &:first-child {
+      padding-right: 30px;
+      @include bp(md) {
+        padding-right: 0;
+      }
+    }
+    &:last-child {
+      padding-left: 30px;
+      @include bp(md) {
+        padding-left: 0;
+      }
+    }
+  }
+  .mobile-only {
+    margin: 0 auto 2em;
+  }
+}
+.pdf-page-content .schwab-graphic {
+  > * {
+    float: left;
+    &:first-child {
+      padding-right: 0.25in;
+    }
+    &:last-child {
+      padding-left: 0.25in;
+    }
+  }
+  &:before, &:after {
+    display: table;
+    content: '';
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+#content_editor [class*="schwab-graphic"],
+.pdf-page-content [class*="schwab-graphic"] {
+  @include bp(md) {
+    margin-bottom: 2em;
+  }
+}
+
+#content_editor .schwab-graphic-first-container,
+.pdf-page-content .schwab-graphic-first-container {
+  position: relative;
+}
+.pdf-page-content .schwab-graphic-first-container {
+  width: 2.25in;
+}
+
+#content_editor .schwab-graphic-second-container,
+.pdf-page-content .schwab-graphic-second-container {
+  text-align: center !important;
+  position: relative;
+  &:before {
+    content: '';
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: $brand-two;
+    right: calc(100%);
+  }
+  &:after {
+    content: '';
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: $brand-three;
+    left: calc(100%);
+  }
+  @include bp(md) {
+    display: none;
+  }
+}
+.pdf-page-content .schwab-graphic-second-container:before, 
+.pdf-page-content .schwab-graphic-second-container:after {
+  display: none !important;
+}
+
+.pdf-page-content .schwab-graphic-secondish-container {
+  width: 2.25in;
+}
+
+#content_editor .schwab-graphic-third-container,
+.pdf-page-content .schwab-graphic-third-container {
+  max-width: 50%;
+  margin: 2em auto 0;
+  position: relative;
+  @include bp(md) {
+    max-width: 100%;
+  }
+  &:before {
+    content: '';
+    width: 20px;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-75%) translateY(-50%) rotate(90deg);
+    height: 1px;
+    background-color: $brand-three;
+    @include bp(md) {
+      display: none;
+    }
+  }
+  h6 {
+    font-size: 0.8em !important;
+    text-align: center;
+    @include bp(md) {
+      text-align: left;
+    }
+  }
+  li {
+    font-size: 0.75em !important;
+  }
+}
+.pdf-page-content .schwab-graphic-third-container {
+  width: 50%;
+  max-width: 50%;
+  &:before {
+    display: none !important;
+  }
+}
+
+#content_editor [class*="schwab-graphic"] img,
+.pdf-page-content [class*="schwab-graphic"] img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2em !important;
+}
+#content_editor .schwab-graphic-third-container img {
+  margin-bottom: 0 !important;
+  @include bp(md) {
+    margin-bottom: 2em !important
+  }
+}
+.pdf-page-content [class*="schwab-graphic"] img {
+  max-width: 3in;
+}

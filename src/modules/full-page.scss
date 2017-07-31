@@ -1,4 +1,5 @@
-.full-page {
+#content_editor .full-page,
+.pdf-page-content .full-page {
   margin-left: -30px;
   margin-top: -20px;
   width: calc(100% + 60px);
@@ -6,8 +7,16 @@
   position: relative;
   z-index: 1;
 }
+.pdf-page-content .full-page {
+  margin-top: -0.5in;
+  margin-left: -0.5in;
+  padding: 0.5in;
+  width: 8.5in !important;
+  min-height: 11in !important;
+}
 
-.light-page {
+#content_editor .light-page,
+.pdf-page-content .light-page {
   background-color: $light-gray;
   margin-bottom: -20px;
 }

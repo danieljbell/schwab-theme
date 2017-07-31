@@ -1,17 +1,27 @@
-.full-container {
+#content_editor .full-container,
+.pdf-page-content .full-container {
   margin-left: -30px;
   width: calc(100% + 60px);
   padding: 30px;
 }
+.pdf-page-content .full-container {
+  margin-left: -0.5in;
+  width: 8.5in;
+  padding: 0.5in; 
+}
 
-.light-callout {
+#content_editor .light-callout,
+.pdf-page-content .light-callout {
   background-color: $light-gray;
 }
 
-.brand-three-callout {
+#content_editor .brand-three-callout,
+.pdf-page-content .brand-three-callout {
   background-color: $brand-three;
   color: #fff !important;
-  .light-gray-box & {
-    color: #fff !important;
-  }
+}
+
+#content_editor .light-gray-box .brand-three-callout,
+.pdf-page-content .light-gray-box .brand-three-callout {
+  color: #fff !important;
 }

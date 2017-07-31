@@ -18,14 +18,16 @@
   content: '';
 }
 
-.brand-box {
+#content_editor .brand-box,
+.pdf-page-content .brand-box {
   @extend %box;
   &:after {
     background-color: $brand;
   }
 }
 
-.brand-box--lighten {
+#content_editor .brand-box--lighten,
+.pdf-page-content .brand-box--lighten {
   @extend %box;
   color: $brand-font-color !important;
   * {
@@ -36,14 +38,16 @@
   }
 }
 
-.brand-box--multiply {
+#content_editor .brand-box--multiply,
+.pdf-page-content .brand-box--multiply {
   @extend %box;
   &:after {
     background-color: darken(transparentize($brand-three, 0.15), 12%);
   }
 }
 
-.light-gray-box {
+#content_editor .light-gray-box,
+.pdf-page-content .light-gray-box {
   @extend %box;
   * {
     color: $brand-font-color !important;
@@ -58,7 +62,8 @@
   }
 }
 
-.brand-two-box {
+#content_editor .brand-two-box,
+.pdf-page-content .brand-two-box {
   @extend %box;
   &:after {
     background-color: $brand-two;
@@ -68,7 +73,8 @@
   }
 }
 
-.brand-two-box--lighten {
+#content_editor .brand-two-box--lighten,
+.pdf-page-content .brand-two-box--lighten {
   @extend %box;
   color: $brand-font-color !important;
   &:after {
@@ -79,7 +85,8 @@
   }
 }
 
-.brand-three-box {
+#content_editor .brand-three-box,
+.pdf-page-content .brand-three-box {
   @extend %box;
   &:after {
     background-color: $brand-three;
@@ -92,6 +99,7 @@
 SCHWAB BOX DEFAULTS
 ==============================
 */
-[class*='-box'] {
+#content_editor [class*='-box'],
+.pdf-page-content [class*='-box'] {
   padding-bottom: 55%;
 }
