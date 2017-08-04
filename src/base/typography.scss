@@ -9,6 +9,10 @@
     line-height: 1.2 !important;
   }
 }
+.pdf-page-content h1 {
+  font-size: 20pt !important;
+  line-height: 1.2 !important;
+}
 
 #content_editor h2,
 .pdf-page-content h2 {
@@ -56,9 +60,20 @@
   margin-bottom: 9px;
 }
 
+#content_editor blockquote,
+.pdf-page-content blockquote {
+  margin: 0 !important;
+}
+
 #content_editor blockquote > *,
 .pdf-page-content blockquote > * {
   color: $brand;
+}
+
+#content_editor blockquote > p,
+.pdf-page-content blockquote > p {
+  font-size: 1.05em !important;
+  line-height: 1.3 !important;
 }
 
 #content_editor blockquote > p:first-child,
@@ -94,19 +109,24 @@
 #content_editor sup,
 .pdf-page-content sup {
   font-size: 0.6em !important;
+  line-height: 1 !important;
 }
 
 #content_editor .footnotes,
 .pdf-page-content .footnotes {
-  font-size: 0.55em;
+  font-size: 0.55em !important;
   line-height: 1.4 !important;
   padding-left: 1em !important;
   margin-top: 40px;
   * {
-    font-size: 1em;
+    font-size: 1em !important;
     line-height: 1.4 !important;
   }
   > li {
     margin-bottom: 5px;
   }
+}
+.pdf-page-content .footnotes {
+  padding-left: 0.2in !important;
+  margin-top: 0.125in;
 }

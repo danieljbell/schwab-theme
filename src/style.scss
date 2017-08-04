@@ -1,3 +1,8 @@
+/* HACK TO THE MAIN FRAME FOR CUSTOMER LOGO */
+div.document-header .document-header-inner .logo-container-wrap .logo-container {
+    background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/436185_original.jpg?1487880591) !important;
+}
+
 @import 
   '_variables',
   '_media-queries',
@@ -10,4 +15,5 @@
   'pages/cover',
   'pages/toc',
   'pages/schwab-graphic',
+  'pages/contact-us',
   'base/utilities';

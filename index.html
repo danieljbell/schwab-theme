@@ -30,7 +30,7 @@
   <div id="content_editor">
     
     <div class="page" id="page-one">
-      <div class="full-page">
+      <div class="full-page pos-rel schwab-cover-container">
         <div class="schwab-cover">
           <img src="https://mytinder.s3.amazonaws.com/assets/medias/447479_original.png?1490126381" alt="" class="schwab-cover-bg">
           <div class="grid">
@@ -42,7 +42,7 @@
               <div class="schwab-cover-content-container">
                 <h1>Your 401(k) plan proposal</h1>
                 <div class="brand-box--multiply">
-                  <h2>Schwab Retirement Network</h2>
+                  <h2><strong>Schwab Retirement Network</strong></h2>
                   <p>Prepared with an independent retirement plan provider</p>
                 </div>
               </div>
@@ -50,15 +50,15 @@
           </div>
         </div>
         <div class="schwab-workgroup-label">
-          <img src="http://placecage.com/200/50" alt="">
+          <span class="pos-abs" style="visibility: hidden;">{{workgroup_logo}}</span>
+          <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_thumb.jpg?1501704222" alt="" class="client-logo">
         </div>
-        <div style="page-break-after: always;"></div>
       </div>
     </div>
 
     <div class="page" id="page-two">
       <div class="full-page">
-        <div class="light-callout full-container">
+        <div class="light-callout full-container neg-mar-t">
           <div class="grid">
             <div class="unit half">
               <img src="https://mytinder.s3.amazonaws.com/assets/medias/447480_original.png?1490126381" alt="" style="width: 100%;">
@@ -128,7 +128,7 @@
           </div>
           <div class="brand-three-font-color schwab-graphic-secondish-container">
             <img src="https://mytinder.s3.amazonaws.com/assets/medias/508837_original.png?1501509680" alt="" class="mobile-only">
-          <h6>{{YOU FIRM NAME HERE}}</h6>
+          <h6><strong>{{YOU FIRM NAME HERE}}</strong></h6>
           <p><strong>Your independent recordkeeper</strong></p>
           <ul>
             <li>Customized plan design and administration</li>
@@ -159,7 +159,7 @@
     <div class="page" id="page-four">
       <div class="grid mar-b">
         <div class="unit half">
-          <div class="brand-box mar-b" style="display: inline-block;">
+          <div class="brand-box" style="display: inline-block;">
             <h1>The Schwab difference</h1>
           </div>
         </div>
@@ -177,14 +177,12 @@
         <div class="unit half">
           <h3>Leadership</h3>
           <p>For more than 40 years, Schwab has been a leader in the financial industry and an advocate for the individual investor.1 We entered the retirement plan services business in 1992 and remain committed to the industry—now and in the future. Schwab’s management team includes former recordkeeping business leaders with both proven experience in the retirement business and the ability to understand and anticipate industry trends.</p>
-          <br>
           <h3>Expertise</h3>
           <p>Schwab’s extensive experience, combined with our breadth of capabilities, enable us to see the complete picture of the retirement plan industry. We know the retirement plan business inside and out. In ways that others can’t, we draw on our deep institutional knowledge to achieve a depth of insight that sets us apart as an industry leader. While working with independent recordkeepers, we can deliver on our long-standing history as an advocate for the individual investor and plan participant.</p>
-          <br>
           <h3>Strength</h3>
           <p>Schwab is dedicated to protecting account assets and is a name that retirement plan sponsors, employers, and participants can depend upon. With Schwab, we want you to have the highest level of confidence that you are working with a prominent brand focused on supporting your needs as a plan sponsor and those of your plan participants.</p>
         </div>
-        <div class="unit half">
+        <div class="unit half schwab-box-grid">
           <div class="grid">
             <div class="unit half">
               <div class="brand-box">
@@ -224,69 +222,68 @@
     </div>
 
     <div class="page" id="page-five">
-      <div class="grid">
-        <div class="unit one-quarter"> 
-          <img src="https://mytinder.s3.amazonaws.com/assets/medias/447478_original.png?1490126379" alt="" class="mar-b">
+      <div class="full-page light-page">
+        <div class="grid full-container neg-mar-t" style="background-color: #fff;">
+          <div class="unit one-quarter"> 
+            <img src="https://mytinder.s3.amazonaws.com/assets/medias/447478_original.png?1490126379" alt="" class="mar-b">
+          </div>
+          <div class="unit three-quarters">
+            <p class="brand-font-color font-bump">Schwab believes in the power of collaboration—and the benefits that independent recordkeepers deliver to the retirement planning process. We invite you to leverage our established relationships with a network of retirement professionals to help connect you with the expertise and experience you need. Schwab is pleased to provide you with an introduction to the select independent recordkeeper below for your consideration.</p>
+          </div>
         </div>
-        <div class="unit three-quarters">
-          <p class="brand-font-color font-bump">Schwab believes in the power of collaboration—and the benefits that independent recordkeepers deliver to the retirement planning process. We invite you to leverage our established relationships with a network of retirement professionals to help connect you with the expertise and experience you need. Schwab is pleased to provide you with an introduction to the select independent recordkeeper below for your consideration.</p>
-        </div>
-      </div>
-      <br>
-      <div class="light-callout full-container mar-b-negative">
-        <br>
-        <h2 class="brand-three-font-color mar-b">{{Your FIRM NAME HERE}} Firm Profile</h2>
-        <div class="grid pos-rel">
-          <div class="unit one-third">
-            <table class="schwab-table">
-              <thead>
-                <tr>
-                  <th>Core Services</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>Comprehensive Plan Administration</li>
-                      <li>Compliance Testing and Form 5500</li>
-                      <li>Retirement Plan Design and Consulting</li>
-                      <li>Top Technology and Web Services</li>
-                      <li>Complete Participant and Plan Sponsor Support</li>
-                      <li>Dedicated Service Team</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="pos-abs pos-bottom desktop-only">
-              <img src="http://fillmurray.com/200/75" alt="">
+        <div class="full-container neg-mar-t mar-b-negative">
+          <h2 class="brand-three-font-color mar-b">{{Your FIRM NAME HERE}} Firm Profile</h2>
+          <div class="grid pos-rel">
+            <div class="unit one-third">
+              <table class="schwab-table">
+                <thead>
+                  <tr>
+                    <th>Core Services</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li>Comprehensive Plan Administration</li>
+                        <li>Compliance Testing and Form 5500</li>
+                        <li>Retirement Plan Design and Consulting</li>
+                        <li>Top Technology and Web Services</li>
+                        <li>Complete Participant and Plan Sponsor Support</li>
+                        <li>Dedicated Service Team</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pos-abs pos-bottom desktop-only">
+                <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="client-logo">
+              </div>
+            </div>
+            <div class="unit two-thirds">
+              <h4>What {{YOUR FIRM NAME HERE}} Does</h4>
+              <p>{{YOUR FIRM NAME HERE}} is personally and passionately committed to your retirement plan success. Using a consultative approach, dedicated relationship managers and client service teams provide comprehensive plan administration and recordkeeping. Founded in 1993 and headquartered in Rochester, New York, has 89 employees with over 47% holding ASPPA credentials. Is dedicated to helping your clients secure their future.</p>
+              <h4>What Defines {{YOUR FIRM NAME HERE}}</h4>
+              <p>Brings together all of the critical components of a sound retirement plan seamlessly and at a reasonable cost. In the daily valuation program, performs all daily recordkeeping and third-party administrative services. Utilizes the Schwab Retirement Technologies® recordkeeping system which ensures timely and accurate processing of plan and participant activity, and prompt execution of daily trade activity. Defines itself in the marketplace with:</p>
+              <ul>
+                <li>
+                  <h6>Personal Relationships</h6>
+                  <p>Dedicated service team will work with plan sponsors to build a relationship defined by the retirement goals of your company and your employees. Your team will consult with plan sponsors on best practices for plan administration, investment selection and ongoing monitoring, and participant education.</p>
+                </li>
+                <li>
+                  <h6>Recordkeeping and TPA Services</h6>
+                  <p>Offers a full complement of services including comprehensive plan administration, compliance testing, prototype plan documents, and retirement plan design and consulting.</p>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="unit two-thirds">
-            <h4>What {{YOUR FIRM NAME HERE}} Does</h4>
-            <p>{{YOUR FIRM NAME HERE}} is personally and passionately committed to your retirement plan success. Using a consultative approach, dedicated relationship managers and client service teams provide comprehensive plan administration and recordkeeping. Founded in 1993 and headquartered in Rochester, New York, has 89 employees with over 47% holding ASPPA credentials. Is dedicated to helping your clients secure their future.</p>
-            <h4>What Defines {{YOUR FIRM NAME HERE}}</h4>
-            <p>Brings together all of the critical components of a sound retirement plan seamlessly and at a reasonable cost. In the daily valuation program, performs all daily recordkeeping and third-party administrative services. Utilizes the Schwab Retirement Technologies® recordkeeping system which ensures timely and accurate processing of plan and participant activity, and prompt execution of daily trade activity. Defines itself in the marketplace with:</p>
-            <ul>
-              <li>
-                <h6>Personal Relationships</h6>
-                <p>Dedicated service team will work with plan sponsors to build a relationship defined by the retirement goals of your company and your employees. Your team will consult with plan sponsors on best practices for plan administration, investment selection and ongoing monitoring, and participant education.</p>
-              </li>
-              <li>
-                <h6>Recordkeeping and TPA Services</h6>
-                <p>Offers a full complement of services including comprehensive plan administration, compliance testing, prototype plan documents, and retirement plan design and consulting.</p>
-              </li>
-            </ul>
-          </div>
         </div>
-        <img src="http://fillmurray.com/200/75" alt="" class="mobile-only">
+        <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="mobile-only client-logo">
       </div>
-      <div style="page-break-after: always;"></div>
     </div>
 
     <div class="page" id="page-six">
-      <div class="full-page light-page">
+      <div class="full-page light-page neg-mar-t">
         <div class="grid pos-rel">
           <div class="unit one-third">
             <table class="schwab-table">
@@ -303,13 +300,13 @@
                       <li>Average plan size: 75 employees with more than $2 million in assets</li>
                       <li>Daily Valued Plans: 401(k), 403(b), 457, ESOP, Money Purchase, and Profit Sharing Plans</li>
                     </ul>
-                    <img src="http://fillmurray.com/400/100" alt="">
+                    <img src="https://mytinder.s3.amazonaws.com/assets/medias/510154_original.png?1501704828" alt="">
                   </td>
                 </tr>
               </tbody>
             </table>
             <div class="pos-abs pos-bottom desktop-only">
-              <img src="http://fillmurray.com/200/75" alt="">
+              <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="client-logo">
             </div>
           </div>
           <div class="unit two-thirds">
@@ -340,12 +337,11 @@
             </ul>
           </div>
         </div>
-        <img src="http://fillmurray.com/200/75" alt="" class="mobile-only">
-        <ol class="footnotes no-bull">
+        <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="mobile-only client-logo">
+        <ol class="footnotes no-bull" style="max-width: 50%;">
           <li>The independent recordkeeper, not Schwab, listed above is solely responsible for the description of the recordkeeping services and accuracy of the firm content contained in this information sheet. The recordkeeper is independent of Schwab and is not employed by Schwab or acting as Schwab’s agent.</li>
         </ol>
       </div>
-      <div style="page-break-after: always;"></div>
     </div>
 
     <div class="page" id="page-seven">
@@ -357,7 +353,7 @@
           <p>&nbsp;</p>
           <p class="brand-font-color">This transparent pricing schedule is designed to provide you with fee certainty. You also have access to select low-cost, flexible investment options that help meet the needs of your participants. All fees are clear and disclosed—helping you meet your fiduciary responsibilities as a plan sponsor to your employees.</p>
           <p class="brand-font-color">Mutual fund companies may make payments to Schwab in exchange for a variety of shareholder services.<sup>4</sup> The amounts that are remitted vary by fund. Please consult your independent recordkeeper for additional information.</p>
-          <div class="pos-abs pos-bottom pad-b pad-r" style="max-width: calc(33% - 20px);">
+          <div class="pos-abs pos-bottom pad-b pad-r print-third" style="max-width: calc(33% - 20px);">
             <ol class="footnotes" start="4">
               <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, inventore.</li>
             </ol>
@@ -440,7 +436,7 @@
               </ul>
             </div>
             <div class="pos-abs pos-bottom pad-b pad-r no-abs-mobile">
-              <ol class="footnotes" start="5">
+              <ol class="footnotes print-90" start="5">
                 <li>May be subject to a minimum fee based on the fee schedule of your independent recordkeeper. Please contact them for complete details.</li>
                 <li>The fees quoted in this proposal are based on the assumptions listed above. These fees are subject to revision if the plan characteristics differ from the specific data listed above. Fees and services to be provided will be finalized upon review of all plan documentation, and incorporated into the service agreement. Fees included in the gray boxes are supplied by the independent recordkeeper. Fees included in the blue boxes are supplied by Schwab. Total fees are a combination of independent recordkeeper fees and Schwab fees, respectively.</li>
               </ol>
@@ -555,7 +551,7 @@
               </ul>
             </div>
             <div class="pos-abs pos-bottom pad-b pad-r no-abs-mobile">
-              <ol class="footnotes" start="5">
+              <ol class="footnotes print-90" start="5">
                 <li>May be subject to a minimum fee based on the fee schedule of your independent recordkeeper. Please contact them for complete details.</li>
                 <li>The fees quoted in this proposal are based on the assumptions listed above. These fees are subject to revision if the plan characteristics differ from the specific data listed above. Fees and services to be provided will be finalized upon review of all plan documentation, and incorporated into the service agreement. Fees included in the gray boxes are supplied by the independent recordkeeper. Fees included in the blue boxes are supplied by Schwab. Total fees are a combination of independent recordkeeper fees and Schwab fees, respectively.</li>
               </ol>
@@ -567,7 +563,7 @@
     </div>
 
     <div class="page" id="page-nine">
-      <div class="full-page light-page">
+      <div class="full-page light-page schwab-contact-us">
         <div class="grid">
           <div class="unit half pad-b">
             <img src="https://mytinder.s3.amazonaws.com/assets/medias/447481_original.png?1490126382" alt="" style="width: 100%;">
@@ -606,12 +602,11 @@
           <div class="unit half"></div>
         </div>
       </div>
-      <div style="page-break-after: always;"></div>
     </div>
 
 
     <div class="page" id="page-ten">
-      <div style="min-height: 700px;">
+      <div class="full-page schwab-back-cover">
         <div class="grid pos-abs pos-bottom no-abs-mobile">
           <div class="unit golden-large">
             <div class="footnotes">
@@ -620,7 +615,7 @@
               <p>©2017 Charles Schwab Bank. All rights reserved. Member SIPC. TWI (0517-Z09T) MKT97464-00 (06/17)</p>
             </div>
           </div>
-          <div class="unit golden-small schwab-back-cover">
+          <div class="unit golden-small">
             <div class="pull-right">
               <img src="https://mytinder.s3.amazonaws.com/assets/medias/438393_original.png?1488379469" alt="" class="schwab-logo">
               <img src="https://mytinder.s3.amazonaws.com/assets/medias/506649_original.png?1501015586" alt="" class="schwab-logo-tagline">
@@ -628,7 +623,6 @@
           </div>
         </div>
       </div>
-      <div style="page-break-after: always;"></div>
     </div>
 
   </div>

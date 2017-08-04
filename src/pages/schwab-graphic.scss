@@ -105,7 +105,7 @@
 #content_editor .schwab-graphic-third-container,
 .pdf-page-content .schwab-graphic-third-container {
   max-width: 50%;
-  margin: 2em auto 0;
+  margin: 0.5em auto 0;
   position: relative;
   @include bp(md) {
     max-width: 100%;
@@ -135,6 +135,7 @@
   }
 }
 .pdf-page-content .schwab-graphic-third-container {
+  margin-top: 0in !important;
   width: 50%;
   max-width: 50%;
   &:before {

@@ -1,3 +1,8 @@
+.pdf-page-content .full-page.schwab-cover-container {
+  min-height: 11in !important;
+  overflow: auto !important;
+}
+
 #content_editor .schwab-cover,
 .pdf-page-content .schwab-cover {
   overflow: hidden;
@@ -9,15 +14,18 @@
   padding-right: 40px;
   background-size: 1190px;
   background-position: -75px -140px;
+  margin-bottom: 100px;
   @include bp(sm) {
     background-position: -250px -100px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 0;
   }
 }
 .pdf-page-content .schwab-cover {
-  height: 9.5in;
   padding: 0;
+  margin-bottom: -0.5in;
+  min-height: 9.5in;
 }
 
 #content_editor .schwab-cover-bg,
@@ -62,7 +70,7 @@
   margin-bottom: 5em;
 }
 .pdf-page-content .schwab-logo-tagline {
-  margin-bottom: 2.75in;  
+  margin-bottom: 2in;  
 }
 
 #content_editor .schwab-cover-content-container,
@@ -71,6 +79,9 @@
   @include bp(sm) {
     margin-bottom: 2em;
   }
+}
+.pdf-page-content .schwab-cover-content-container {
+  margin-bottom: 0 !important;
 }
 
 #content_editor .schwab-cover-content-container [class*="-box"],
@@ -83,6 +94,9 @@
   font-size: 2.5em !important;
   margin-bottom: 0.5em !important;
   line-height: 1 !important;
+}
+.pdf-page-content .schwab-cover-content-container h1 {
+  font-size: 38pt !important;
 }
 #content_editor .schwab-cover-content-container h2,
 .pdf-page-content .schwab-cover-content-container h2 {
@@ -98,11 +112,17 @@
 
 #content_editor .schwab-workgroup-label,
 .pdf-page-content .schwab-workgroup-label {
-  margin-top: 20px;
+  margin-top: 130px;
   text-align: right;
   @include bp(sm) {
     text-align: center;
   }
+}
+.pdf-page-content .schwab-workgroup-label {
+  margin-top: 0;
+  position: absolute;
+  bottom: 0.3125in;
+  right: 0.5in;
 }
 
 
@@ -113,6 +133,7 @@ BACK COVER
 */
 #content_editor .schwab-back-cover,
 .pdf-page-content .schwab-back-cover {
+  min-height: 700px;
   > div:last-child {
     padding-right: 30px;
   }
@@ -131,5 +152,16 @@ BACK COVER
         margin: 20px auto 30px;
       }
     }
+  }
+}
+.pdf-page-content .schwab-back-cover {
+  height: 11in;
+  min-height: 11in;
+  max-height: 11in;
+  > div:last-child {
+    padding-right: 1in;
+  }
+  > .pos-bottom {
+    top: 9in;
   }
 }

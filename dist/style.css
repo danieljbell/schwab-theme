@@ -1,3 +1,6 @@
+/* HACK TO THE MAIN FRAME FOR CUSTOMER LOGO */
+div.document-header .document-header-inner .logo-container-wrap .logo-container {
+  background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/436185_original.jpg?1487880591) !important; }
 /*
 ========================
 BREAKPOINTS
@@ -13,6 +16,9 @@ CREATE MEDIA QUERY
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #0ea0db !important; }
+.pdf-page-content h1 {
+  font-size: 20pt !important;
+  line-height: 1.2 !important; }
 #content_editor h3,
 .pdf-page-content h3 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -35,9 +41,16 @@ CREATE MEDIA QUERY
   font-weight: 300 !important; }
 #content_editor ul > li {
   margin-bottom: 9px; }
+#content_editor blockquote,
+.pdf-page-content blockquote {
+  margin: 0 !important; }
 #content_editor blockquote > *,
 .pdf-page-content blockquote > * {
   color: #0ea0db; }
+#content_editor blockquote > p,
+.pdf-page-content blockquote > p {
+  font-size: 1.05em !important;
+  line-height: 1.3 !important; }
 #content_editor blockquote > p:first-child,
 .pdf-page-content blockquote > p:first-child {
   position: relative; }
@@ -64,20 +77,24 @@ CREATE MEDIA QUERY
   margin-bottom: 1em; }
 #content_editor sup,
 .pdf-page-content sup {
-  font-size: 0.6em !important; }
+  font-size: 0.6em !important;
+  line-height: 1 !important; }
 #content_editor .footnotes,
 .pdf-page-content .footnotes {
-  font-size: 0.55em;
+  font-size: 0.55em !important;
   line-height: 1.4 !important;
   padding-left: 1em !important;
   margin-top: 40px; }
 #content_editor .footnotes *,
   .pdf-page-content .footnotes * {
-    font-size: 1em;
+    font-size: 1em !important;
     line-height: 1.4 !important; }
 #content_editor .footnotes > li,
   .pdf-page-content .footnotes > li {
     margin-bottom: 5px; }
+.pdf-page-content .footnotes {
+  padding-left: 0.2in !important;
+  margin-top: 0.125in; }
 /*
 ==============================
 RESETS/OVERRIDES
@@ -97,24 +114,48 @@ RESETS/OVERRIDES
   .pdf-page-content .grid .unit.half:nth-child(2n) {
     padding-right: 0px !important;
     padding-left: 20px; }
+.pdf-page-content .grid .unit.half {
+  padding-right: 0.125in !important; }
+.pdf-page-content .grid .unit.half:nth-child(2n) {
+    padding-right: 0in !important;
+    padding-left: 0.125in !important; }
 #content_editor .grid .unit.one-third,
 .pdf-page-content .grid .unit.one-third {
   padding-right: 20px; }
+.pdf-page-content .grid .unit.one-third {
+  padding-right: 0.125in; }
 #content_editor .grid .unit.two-thirds,
 .pdf-page-content .grid .unit.two-thirds {
   padding-left: 20px; }
+.pdf-page-content .grid .unit.two-thirds {
+  padding-left: 0.125in; }
 #content_editor .grid .unit.one-quarter,
 .pdf-page-content .grid .unit.one-quarter {
   padding-right: 20px; }
+.pdf-page-content .grid .unit.one-quarter {
+  padding-right: 0.125in; }
 #content_editor .grid .unit.three-quarters,
 .pdf-page-content .grid .unit.three-quarters {
   padding-left: 20px; }
+.pdf-page-content .grid .unit.three-quarters {
+  padding-left: 0.125in; }
+/* Overides for custom box grid */
+#content_editor .schwab-box-grid > .grid,
+.pdf-page-content .schwab-box-grid > .grid {
+  overflow: hidden; }
+#content_editor .schwab-box-grid > .grid > *,
+.pdf-page-content .schwab-box-grid > .grid > * {
+  max-height: 185px;
+  border-top: 15px solid #fff; }
+.pdf-page-content .schwab-box-grid > .grid > * {
+  max-height: 1.75in; }
 #content_editor .schwab-table,
 .pdf-page-content .schwab-table {
   border: 0px !important;
   margin-bottom: 20px; }
 #content_editor .schwab-table thead th,
 .pdf-page-content .schwab-table thead th {
+  text-align: left !important;
   background-color: #005f83 !important;
   color: #fff !important;
   padding: 5px 10px !important;
@@ -125,7 +166,10 @@ RESETS/OVERRIDES
   padding: 10px !important; }
 #content_editor .schwab-table tbody td li,
   .pdf-page-content .schwab-table tbody td li {
-    font-size: 0.75em !important; }
+    font-size: 0.75em !important;
+    line-height: 1.4; }
+.pdf-page-content .schwab-table tbody td li {
+  margin-bottom: 0.125in; }
 #content_editor .schwab-table img,
 .pdf-page-content .schwab-table img {
   text-align: center;
@@ -242,12 +286,14 @@ SCHWAB BOX DEFAULTS
   padding-bottom: 55%; }
 #content_editor .full-page,
 .pdf-page-content .full-page {
+  overflow: hidden;
   margin-left: -30px;
   margin-top: -20px;
   width: calc(100% + 60px);
   padding: 20px 30px;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  page-break-after: always; }
 .pdf-page-content .full-page {
   margin-top: -0.5in;
   margin-left: -0.5in;
@@ -258,6 +304,9 @@ SCHWAB BOX DEFAULTS
 .pdf-page-content .light-page {
   background-color: #e6e8ea;
   margin-bottom: -20px; }
+.pdf-page-content .full-page.schwab-cover-container {
+  min-height: 11in !important;
+  overflow: auto !important; }
 #content_editor .schwab-cover,
 .pdf-page-content .schwab-cover {
   overflow: hidden;
@@ -267,10 +316,12 @@ SCHWAB BOX DEFAULTS
   padding-left: 40px;
   padding-right: 40px;
   background-size: 1190px;
-  background-position: -75px -140px; }
+  background-position: -75px -140px;
+  margin-bottom: 100px; }
 .pdf-page-content .schwab-cover {
-  height: 9.5in;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: -0.5in;
+  min-height: 9.5in; }
 #content_editor .schwab-cover-bg,
 .pdf-page-content .schwab-cover-bg {
   position: absolute;
@@ -301,10 +352,12 @@ SCHWAB BOX DEFAULTS
   max-width: 200px !important;
   margin-bottom: 5em; }
 .pdf-page-content .schwab-logo-tagline {
-  margin-bottom: 2.75in; }
+  margin-bottom: 2in; }
 #content_editor .schwab-cover-content-container,
 .pdf-page-content .schwab-cover-content-container {
   margin-bottom: 4em; }
+.pdf-page-content .schwab-cover-content-container {
+  margin-bottom: 0 !important; }
 #content_editor .schwab-cover-content-container [class*="-box"],
 .pdf-page-content .schwab-cover-content-container [class*="-box"] {
   padding-bottom: 30%; }
@@ -313,6 +366,8 @@ SCHWAB BOX DEFAULTS
   font-size: 2.5em !important;
   margin-bottom: 0.5em !important;
   line-height: 1 !important; }
+.pdf-page-content .schwab-cover-content-container h1 {
+  font-size: 38pt !important; }
 #content_editor .schwab-cover-content-container h2,
 .pdf-page-content .schwab-cover-content-container h2 {
   font-size: 1.5em !important;
@@ -324,21 +379,37 @@ SCHWAB BOX DEFAULTS
   line-height: 1.4 !important; }
 #content_editor .schwab-workgroup-label,
 .pdf-page-content .schwab-workgroup-label {
-  margin-top: 20px;
+  margin-top: 130px;
   text-align: right; }
+.pdf-page-content .schwab-workgroup-label {
+  margin-top: 0;
+  position: absolute;
+  bottom: 0.3125in;
+  right: 0.5in; }
 /*
 ==============================
 BACK COVER
 ==============================
 */
+#content_editor .schwab-back-cover,
+.pdf-page-content .schwab-back-cover {
+  min-height: 700px; }
 #content_editor .schwab-back-cover > div:last-child,
-.pdf-page-content .schwab-back-cover > div:last-child {
-  padding-right: 30px; }
+  .pdf-page-content .schwab-back-cover > div:last-child {
+    padding-right: 30px; }
 #content_editor .schwab-back-cover img:first-child,
-.pdf-page-content .schwab-back-cover img:first-child {
-  width: 100px;
-  left: 80px;
-  position: relative; }
+  .pdf-page-content .schwab-back-cover img:first-child {
+    width: 100px;
+    left: 80px;
+    position: relative; }
+.pdf-page-content .schwab-back-cover {
+  height: 11in;
+  min-height: 11in;
+  max-height: 11in; }
+.pdf-page-content .schwab-back-cover > div:last-child {
+    padding-right: 1in; }
+.pdf-page-content .schwab-back-cover > .pos-bottom {
+    top: 9in; }
 .schwab-toc li {
   margin-bottom: 1em; }
 #content_editor .schwab-graphic,
@@ -421,7 +492,7 @@ BACK COVER
 #content_editor .schwab-graphic-third-container,
 .pdf-page-content .schwab-graphic-third-container {
   max-width: 50%;
-  margin: 2em auto 0;
+  margin: 0.5em auto 0;
   position: relative; }
 #content_editor .schwab-graphic-third-container:before,
   .pdf-page-content .schwab-graphic-third-container:before {
@@ -443,6 +514,7 @@ BACK COVER
   .pdf-page-content .schwab-graphic-third-container li {
     font-size: 0.75em !important; }
 .pdf-page-content .schwab-graphic-third-container {
+  margin-top: 0in !important;
   width: 50%;
   max-width: 50%; }
 .pdf-page-content .schwab-graphic-third-container:before {
@@ -456,6 +528,8 @@ BACK COVER
   margin-bottom: 0 !important; }
 .pdf-page-content [class*="schwab-graphic"] img {
   max-width: 3in; }
+.pdf-page-content .schwab-contact-us .footnotes {
+  padding-bottom: 0.5in; }
 #content_editor .no-bull,
 .pdf-page-content .no-bull {
   list-style-type: none;
@@ -482,6 +556,13 @@ BACK COVER
 #content_editor .mar-t,
 .pdf-page-content .mar-t {
   margin-top: 20px !important; }
+#content_editor .neg-mar-t,
+.pdf-page-content .neg-mar-t {
+  margin-top: -20px !important;
+  padding-top: 40px !important; }
+.pdf-page-content .neg-mar-t {
+  margin-top: -0.5in !important;
+  padding-top: 0.75in !important; }
 #content_editor .mar-r,
 .pdf-page-content .mar-r {
   margin-right: 20px !important; }
@@ -537,6 +618,9 @@ BACK COVER
   line-height: 1.4em !important; }
 .pdf-page-content .font-shrink > li {
   margin-bottom: 0.0625in; }
+#content_editor img.client-logo,
+.pdf-page-content img.client-logo {
+  max-width: 200px !important; }
 #content_editor .mobile-only,
 .pdf-page-content .mobile-only {
   display: none; }
@@ -545,6 +629,12 @@ BACK COVER
 #content_editor .desktop-only,
 .pdf-page-content .desktop-only {
   display: block; }
+.pdf-page-content .print-third {
+  max-width: 33%; }
+.pdf-page-content .print-two-third {
+  max-width: 66%; }
+.pdf-page-content .print-90 {
+  max-width: 90%; }
 @media (max-width: 568px) {
     #content_editor h1,
     .pdf-page-content h1 {
@@ -572,7 +662,8 @@ BACK COVER
     .pdf-page-content .schwab-cover {
       background-position: -250px -100px;
       padding-left: 20px;
-      padding-right: 20px; }
+      padding-right: 20px;
+      margin-bottom: 0; }
     #content_editor .schwab-cover-bg,
     .pdf-page-content .schwab-cover-bg {
       opacity: 0.35;
@@ -589,13 +680,13 @@ BACK COVER
     #content_editor .schwab-workgroup-label,
     .pdf-page-content .schwab-workgroup-label {
       text-align: center; }
-  #content_editor .schwab-back-cover .pull-right,
-  .pdf-page-content .schwab-back-cover .pull-right {
-    float: none;
-    text-align: center; }
-  #content_editor .schwab-back-cover .pull-right > img,
-  .pdf-page-content .schwab-back-cover .pull-right > img {
-    margin: 20px auto 30px; }
+    #content_editor .schwab-back-cover .pull-right,
+    .pdf-page-content .schwab-back-cover .pull-right {
+      float: none;
+      text-align: center; }
+    #content_editor .schwab-back-cover .pull-right > img,
+    .pdf-page-content .schwab-back-cover .pull-right > img {
+      margin: 20px auto 30px; }
   #content_editor .no-abs-mobile,
   .pdf-page-content .no-abs-mobile {
     position: relative; } }

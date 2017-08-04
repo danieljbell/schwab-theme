@@ -36,6 +36,16 @@
   margin-top: 20px !important;
 }
 
+#content_editor .neg-mar-t,
+.pdf-page-content .neg-mar-t {
+  margin-top: -20px !important;
+  padding-top: 40px !important;
+}
+.pdf-page-content .neg-mar-t {
+  margin-top: -0.5in !important;
+  padding-top: 0.75in !important;
+}
+
 #content_editor .mar-r,
 .pdf-page-content .mar-r {
   margin-right: 20px !important;
@@ -126,6 +136,11 @@
   margin-bottom: 0.0625in;
 }
 
+#content_editor img.client-logo,
+.pdf-page-content img.client-logo {
+  max-width: 200px !important;
+}
+
 #content_editor .mobile-only,
 .pdf-page-content .mobile-only {
   display: none;
@@ -143,4 +158,16 @@
   @include bp(md) {
     display: none;
   }
+}
+
+.pdf-page-content .print-third {
+  max-width: 33%;
+}
+
+.pdf-page-content .print-two-third {
+  max-width: 66%;
+}
+
+.pdf-page-content .print-90 {
+  max-width: 90%;
 }

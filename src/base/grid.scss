@@ -36,23 +36,58 @@ RESETS/OVERRIDES
     padding-right: 0;
   }
 }
+.pdf-page-content .grid .unit.half {
+  padding-right: 0.125in !important;
+  &:nth-child(2n) {
+    padding-right: 0in !important;
+    padding-left: 0.125in !important;
+  }
+}
 
 #content_editor .grid .unit.one-third,
 .pdf-page-content .grid .unit.one-third {
   padding-right: 20px;
+}
+.pdf-page-content .grid .unit.one-third {
+  padding-right: 0.125in; 
 }
 
 #content_editor .grid .unit.two-thirds,
 .pdf-page-content .grid .unit.two-thirds {
   padding-left: 20px;
 }
+.pdf-page-content .grid .unit.two-thirds {
+  padding-left: 0.125in; 
+}
 
 #content_editor .grid .unit.one-quarter,
 .pdf-page-content .grid .unit.one-quarter {
   padding-right: 20px;
 }
+.pdf-page-content .grid .unit.one-quarter {
+  padding-right: 0.125in; 
+}
 
 #content_editor .grid .unit.three-quarters,
 .pdf-page-content .grid .unit.three-quarters {
   padding-left: 20px;
+}
+.pdf-page-content .grid .unit.three-quarters {
+  padding-left: 0.125in;
+}
+
+
+/* Overides for custom box grid */
+#content_editor .schwab-box-grid > .grid,
+.pdf-page-content .schwab-box-grid > .grid {
+  overflow: hidden;
+}
+
+#content_editor .schwab-box-grid > .grid > *,
+.pdf-page-content .schwab-box-grid > .grid > * {
+  max-height: 185px;
+  border-top: 15px solid #fff;
+}
+.pdf-page-content .schwab-box-grid > .grid > * {
+  max-height: 1.75in;
 }
