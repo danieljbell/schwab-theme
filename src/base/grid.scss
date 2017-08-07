@@ -78,6 +78,13 @@ RESETS/OVERRIDES
 
 
 /* Overides for custom box grid */
+#content_editor .schwab-box-grid > .grid .half {
+  @include bp(sm) {
+    padding-right: 0 !important;
+    margin-bottom: calc(35% + 1rem);
+  }
+}
+
 #content_editor .schwab-box-grid > .grid,
 .pdf-page-content .schwab-box-grid > .grid {
   overflow: hidden;

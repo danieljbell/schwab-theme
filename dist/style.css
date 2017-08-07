@@ -635,6 +635,9 @@ BACK COVER
   max-width: 66%; }
 .pdf-page-content .print-90 {
   max-width: 90%; }
+#content_editor .text-is-justified,
+.pdf-page-content .text-is-justified {
+  text-align: justify; }
 @media (max-width: 568px) {
     #content_editor h1,
     .pdf-page-content h1 {
@@ -658,6 +661,9 @@ BACK COVER
     .pdf-page-content .grid .unit.half {
       padding-left: 0;
       padding-right: 0; }
+  #content_editor .schwab-box-grid > .grid .half {
+    padding-right: 0 !important;
+    margin-bottom: calc(35% + 1rem); }
     #content_editor .schwab-cover,
     .pdf-page-content .schwab-cover {
       background-position: -250px -100px;
