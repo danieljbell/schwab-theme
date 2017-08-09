@@ -31,7 +31,10 @@
   }
 }
 .pdf-page-content .schwab-graphic {
+  display: table-cell;
   > * {
+    display: table-cell;
+    vertical-align: middle;
     float: left;
     &:first-child {
       padding-right: 0.25in;

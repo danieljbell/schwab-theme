@@ -24,6 +24,9 @@ CREATE MEDIA QUERY
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #0ea0db !important; }
+#content_editor h3,
+.pdf-page-content h3 {
+  font-weight: 700; }
 .pdf-page-content p {
   font-size: 10pt !important;
   line-height: 14pt !important; }
@@ -81,9 +84,11 @@ CREATE MEDIA QUERY
   line-height: 1 !important; }
 #content_editor .footnotes,
 .pdf-page-content .footnotes {
+  list-style-type: none;
+  counter-reset: footnote;
   font-size: 0.55em !important;
   line-height: 1.4 !important;
-  padding-left: 1em !important;
+  padding-left: 0.5em !important;
   margin-top: 40px; }
 #content_editor .footnotes *,
   .pdf-page-content .footnotes * {
@@ -91,10 +96,32 @@ CREATE MEDIA QUERY
     line-height: 1.4 !important; }
 #content_editor .footnotes > li,
   .pdf-page-content .footnotes > li {
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    position: relative; }
+#content_editor .footnotes > li:before,
+    .pdf-page-content .footnotes > li:before {
+      counter-increment: footnote;
+      content: counter(footnote);
+      position: absolute;
+      top: -0.25em;
+      left: -1em;
+      font-size: 0.75em; }
 .pdf-page-content .footnotes {
+  font-size: 0.45em !important;
   padding-left: 0.2in !important;
   margin-top: 0.125in; }
+#content_editor .footnotes.footnote-4 > li:before,
+.pdf-page-content .footnotes.footnote-4 > li:before {
+  content: '4'; }
+#content_editor .footnotes.footnote-5 > li:first-child:before,
+.pdf-page-content .footnotes.footnote-5 > li:first-child:before {
+  content: '5'; }
+#content_editor .footnotes.footnote-5 > li:nth-child(2):before,
+.pdf-page-content .footnotes.footnote-5 > li:nth-child(2):before {
+  content: '6'; }
+#content_editor .footnotes.footnote-no-number > li:before,
+.pdf-page-content .footnotes.footnote-no-number > li:before {
+  display: none; }
 /*
 ==============================
 RESETS/OVERRIDES
@@ -244,7 +271,8 @@ RESETS/OVERRIDES
     background-color: #bae8fb; }
 #content_editor .brand-box--multiply:after,
 .pdf-page-content .brand-box--multiply:after {
-  background-color: rgba(0, 51, 70, 0.85); }
+  background-color: #004d6a;
+  opacity: 0.9; }
 #content_editor .light-gray-box *,
 .pdf-page-content .light-gray-box * {
   color: #505050 !important; }
@@ -342,8 +370,6 @@ SCHWAB BOX DEFAULTS
   display: block;
   width: 100%;
   max-width: 100px !important;
-  position: relative;
-  left: 25px;
   margin-bottom: 15px; }
 #content_editor .schwab-logo-tagline,
 .pdf-page-content .schwab-logo-tagline {
@@ -363,7 +389,7 @@ SCHWAB BOX DEFAULTS
   padding-bottom: 30%; }
 #content_editor .schwab-cover-content-container h1,
 .pdf-page-content .schwab-cover-content-container h1 {
-  font-size: 2.5em !important;
+  font-size: 2.75em !important;
   margin-bottom: 0.5em !important;
   line-height: 1 !important; }
 .pdf-page-content .schwab-cover-content-container h1 {
@@ -375,7 +401,7 @@ SCHWAB BOX DEFAULTS
   margin-bottom: 20px !important; }
 #content_editor .schwab-cover-content-container p,
 .pdf-page-content .schwab-cover-content-container p {
-  font-size: 1.1em !important;
+  font-size: 1.3em !important;
   line-height: 1.4 !important; }
 #content_editor .schwab-workgroup-label,
 .pdf-page-content .schwab-workgroup-label {
@@ -439,18 +465,22 @@ BACK COVER
 #content_editor .schwab-graphic .mobile-only,
   .pdf-page-content .schwab-graphic .mobile-only {
     margin: 0 auto 2em; }
+.pdf-page-content .schwab-graphic {
+  display: table-cell; }
 .pdf-page-content .schwab-graphic > * {
-  float: left; }
+    display: table-cell;
+    vertical-align: middle;
+    float: left; }
 .pdf-page-content .schwab-graphic > *:first-child {
-    padding-right: 0.25in; }
+      padding-right: 0.25in; }
 .pdf-page-content .schwab-graphic > *:last-child {
-    padding-left: 0.25in; }
+      padding-left: 0.25in; }
 .pdf-page-content .schwab-graphic:before, .pdf-page-content .schwab-graphic:after {
-  display: table;
-  content: '';
-  line-height: 0; }
+    display: table;
+    content: '';
+    line-height: 0; }
 .pdf-page-content .schwab-graphic:after {
-  clear: both; }
+    clear: both; }
 #content_editor .schwab-graphic-first-container,
 .pdf-page-content .schwab-graphic-first-container {
   position: relative; }
@@ -556,6 +586,9 @@ BACK COVER
 #content_editor .mar-t,
 .pdf-page-content .mar-t {
   margin-top: 20px !important; }
+#content_editor .mar-t.more-mar,
+  .pdf-page-content .mar-t.more-mar {
+    margin-top: 60px !important; }
 #content_editor .neg-mar-t,
 .pdf-page-content .neg-mar-t {
   margin-top: -20px !important;

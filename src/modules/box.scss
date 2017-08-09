@@ -42,7 +42,8 @@
 .pdf-page-content .brand-box--multiply {
   @extend %box;
   &:after {
-    background-color: darken(transparentize($brand-three, 0.15), 12%);
+    background-color: darken($brand-three, 5%);
+    opacity: 0.9;
   }
 }
 

@@ -34,6 +34,9 @@
 #content_editor .mar-t,
 .pdf-page-content .mar-t {
   margin-top: 20px !important;
+  &.more-mar {
+    margin-top: 60px !important;
+  }
 }
 
 #content_editor .neg-mar-t,
