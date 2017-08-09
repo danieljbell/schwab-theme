@@ -180,3 +180,37 @@
 .pdf-page-content .text-is-justified {
   text-align: justify;
 }
+
+#content_editor .display-table,
+.pdf-page-content .display-table {
+  display: table !important;
+  @include bp(md) {
+    display: block !important;
+  }
+}
+
+#content_editor .display-table-cell,
+.pdf-page-content .display-table-cell {
+  display: table-cell;
+  @include bp(md) {
+    display: block;
+  }
+}
+
+#content_editor .vertical-align-middle,
+.pdf-page-content .vertical-align-middle {
+  vertical-align: middle;
+}
+
+#content_editor .no-float,
+.pdf-page-content .no-float {
+  float: initial !important;
+  @include bp(md) {
+    float: left !important;
+  }
+}
+
+#content_editor strong.white-text,
+.pdf-page-content strong.white-text {
+  color: #fff !important;
+}

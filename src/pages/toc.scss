@@ -1,3 +1,11 @@
+#content_editor .schwab-toc-page {
+  min-height: 850px;
+}
+
+.pdf-page-content .schwab-toc-page h1 {
+  font-size: 19pt !important;  
+}
+
 .schwab-toc li {
   margin-bottom: 1em;
 }

@@ -24,13 +24,18 @@
 #content_editor h3,
 .pdf-page-content h3 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 300 !important;
   color: $brand !important;
 }
 
-#content_editor h3,
-.pdf-page-content h3 {
-  font-weight: 700;
+.pdf-page-content h4 {
+  font-size: 12pt !important;
+  font-weight: 400 !important;
+}
+
+#content_editor h6,
+.pdf-page-content h6 {
+  font-weight: 600 !important;
 }
 
 #content_editor p,
@@ -103,12 +108,20 @@
 
 #content_editor hr,
 .pdf-page-content hr {
-  background-color: $brand-font-color;
-  border: 0;
-  height: 2px;
-  width: 100%;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  background-color: $brand-font-color !important;
+  border: 0 !important;
+  height: 2px !important;
+  width: 100% !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}
+.pdf-page-content hr {
+  background-color: initial !important;
+  border: initial !important;
+  height: initial !important;
+  width: initial !important;
+  margin-top: initial !important;
+  margin-bottom: initial !important;
 }
 
 #content_editor sup,
@@ -146,6 +159,19 @@
   font-size: 0.45em !important;
   padding-left: 0.2in !important;
   margin-top: 0.125in;
+}
+
+#content_editor .footnotes.footnote-1,
+.pdf-page-content .footnotes.footnote-1 {
+  > li:before {
+    content: '1';
+  }
+  > li:nth-child(2):before {
+    content: '2';
+  }
+  > li:nth-child(3):before {
+    content: '3';
+  }
 }
 
 #content_editor .footnotes.footnote-4,

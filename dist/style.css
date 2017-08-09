@@ -22,11 +22,14 @@ CREATE MEDIA QUERY
 #content_editor h3,
 .pdf-page-content h3 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 300 !important;
   color: #0ea0db !important; }
-#content_editor h3,
-.pdf-page-content h3 {
-  font-weight: 700; }
+.pdf-page-content h4 {
+  font-size: 12pt !important;
+  font-weight: 400 !important; }
+#content_editor h6,
+.pdf-page-content h6 {
+  font-weight: 600 !important; }
 .pdf-page-content p {
   font-size: 10pt !important;
   line-height: 14pt !important; }
@@ -72,12 +75,19 @@ CREATE MEDIA QUERY
   padding: 5px; }
 #content_editor hr,
 .pdf-page-content hr {
-  background-color: #505050;
-  border: 0;
-  height: 2px;
-  width: 100%;
-  margin-top: 1em;
-  margin-bottom: 1em; }
+  background-color: #505050 !important;
+  border: 0 !important;
+  height: 2px !important;
+  width: 100% !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important; }
+.pdf-page-content hr {
+  background-color: initial !important;
+  border: initial !important;
+  height: initial !important;
+  width: initial !important;
+  margin-top: initial !important;
+  margin-bottom: initial !important; }
 #content_editor sup,
 .pdf-page-content sup {
   font-size: 0.6em !important;
@@ -110,6 +120,15 @@ CREATE MEDIA QUERY
   font-size: 0.45em !important;
   padding-left: 0.2in !important;
   margin-top: 0.125in; }
+#content_editor .footnotes.footnote-1 > li:before,
+.pdf-page-content .footnotes.footnote-1 > li:before {
+  content: '1'; }
+#content_editor .footnotes.footnote-1 > li:nth-child(2):before,
+.pdf-page-content .footnotes.footnote-1 > li:nth-child(2):before {
+  content: '2'; }
+#content_editor .footnotes.footnote-1 > li:nth-child(3):before,
+.pdf-page-content .footnotes.footnote-1 > li:nth-child(3):before {
+  content: '3'; }
 #content_editor .footnotes.footnote-4 > li:before,
 .pdf-page-content .footnotes.footnote-4 > li:before {
   content: '4'; }
@@ -135,10 +154,26 @@ RESETS/OVERRIDES
 .pdf-page-content .grid .unit:last-child {
   padding: 0; }
 #content_editor .grid .unit.half,
-.pdf-page-content .grid .unit.half {
+.pdf-page-content .grid .unit.half,
+#content_editor .grid .unit.two-fifths,
+.pdf-page-content .grid .unit.two-fifths,
+#content_editor .grid .unit.three-fifths,
+.pdf-page-content .grid .unit.three-fifths,
+#content_editor .grid .unit.golden-large,
+.pdf-page-content .grid .unit.golden-large,
+#content_editor .grid .unit.golden-small,
+.pdf-page-content .grid .unit.golden-small {
   padding-right: 20px !important; }
 #content_editor .grid .unit.half:nth-child(2n),
-  .pdf-page-content .grid .unit.half:nth-child(2n) {
+  .pdf-page-content .grid .unit.half:nth-child(2n),
+  #content_editor .grid .unit.two-fifths:nth-child(2n),
+  .pdf-page-content .grid .unit.two-fifths:nth-child(2n),
+  #content_editor .grid .unit.three-fifths:nth-child(2n),
+  .pdf-page-content .grid .unit.three-fifths:nth-child(2n),
+  #content_editor .grid .unit.golden-large:nth-child(2n),
+  .pdf-page-content .grid .unit.golden-large:nth-child(2n),
+  #content_editor .grid .unit.golden-small:nth-child(2n),
+  .pdf-page-content .grid .unit.golden-small:nth-child(2n) {
     padding-right: 0px !important;
     padding-left: 20px; }
 .pdf-page-content .grid .unit.half {
@@ -387,13 +422,15 @@ SCHWAB BOX DEFAULTS
 #content_editor .schwab-cover-content-container [class*="-box"],
 .pdf-page-content .schwab-cover-content-container [class*="-box"] {
   padding-bottom: 30%; }
+.pdf-page-content .schwab-cover-content-container [class*="-box"] {
+  padding-bottom: 1.5in; }
 #content_editor .schwab-cover-content-container h1,
 .pdf-page-content .schwab-cover-content-container h1 {
   font-size: 2.75em !important;
   margin-bottom: 0.5em !important;
   line-height: 1 !important; }
 .pdf-page-content .schwab-cover-content-container h1 {
-  font-size: 38pt !important; }
+  font-size: 42pt !important; }
 #content_editor .schwab-cover-content-container h2,
 .pdf-page-content .schwab-cover-content-container h2 {
   font-size: 1.5em !important;
@@ -436,6 +473,10 @@ BACK COVER
     padding-right: 1in; }
 .pdf-page-content .schwab-back-cover > .pos-bottom {
     top: 9in; }
+#content_editor .schwab-toc-page {
+  min-height: 850px; }
+.pdf-page-content .schwab-toc-page h1 {
+  font-size: 19pt !important; }
 .schwab-toc li {
   margin-bottom: 1em; }
 #content_editor .schwab-graphic,
@@ -465,22 +506,18 @@ BACK COVER
 #content_editor .schwab-graphic .mobile-only,
   .pdf-page-content .schwab-graphic .mobile-only {
     margin: 0 auto 2em; }
-.pdf-page-content .schwab-graphic {
-  display: table-cell; }
 .pdf-page-content .schwab-graphic > * {
-    display: table-cell;
-    vertical-align: middle;
-    float: left; }
+  float: left; }
 .pdf-page-content .schwab-graphic > *:first-child {
-      padding-right: 0.25in; }
+    padding-right: 0.25in; }
 .pdf-page-content .schwab-graphic > *:last-child {
-      padding-left: 0.25in; }
+    padding-left: 0.25in; }
 .pdf-page-content .schwab-graphic:before, .pdf-page-content .schwab-graphic:after {
-    display: table;
-    content: '';
-    line-height: 0; }
+  display: table;
+  content: '';
+  line-height: 0; }
 .pdf-page-content .schwab-graphic:after {
-    clear: both; }
+  clear: both; }
 #content_editor .schwab-graphic-first-container,
 .pdf-page-content .schwab-graphic-first-container {
   position: relative; }
@@ -514,14 +551,11 @@ BACK COVER
     height: 1px;
     background-color: #005f83;
     left: calc(100%); }
-.pdf-page-content .schwab-graphic-second-container:before,
-.pdf-page-content .schwab-graphic-second-container:after {
-  display: none !important; }
 .pdf-page-content .schwab-graphic-secondish-container {
   width: 2.25in; }
 #content_editor .schwab-graphic-third-container,
 .pdf-page-content .schwab-graphic-third-container {
-  max-width: 50%;
+  max-width: 65%;
   margin: 0.5em auto 0;
   position: relative; }
 #content_editor .schwab-graphic-third-container:before,
@@ -540,13 +574,14 @@ BACK COVER
   .pdf-page-content .schwab-graphic-third-container h6 {
     font-size: 0.8em !important;
     text-align: center; }
-#content_editor .schwab-graphic-third-container li,
-  .pdf-page-content .schwab-graphic-third-container li {
-    font-size: 0.75em !important; }
+#content_editor .schwab-graphic-third-container li.unit.half,
+  .pdf-page-content .schwab-graphic-third-container li.unit.half {
+    font-size: 0.75em !important;
+    padding-left: 0 !important; }
 .pdf-page-content .schwab-graphic-third-container {
   margin-top: 0in !important;
-  width: 50%;
-  max-width: 50%; }
+  width: 60%;
+  max-width: 60%; }
 .pdf-page-content .schwab-graphic-third-container:before {
     display: none !important; }
 #content_editor [class*="schwab-graphic"] img,
@@ -671,6 +706,21 @@ BACK COVER
 #content_editor .text-is-justified,
 .pdf-page-content .text-is-justified {
   text-align: justify; }
+#content_editor .display-table,
+.pdf-page-content .display-table {
+  display: table !important; }
+#content_editor .display-table-cell,
+.pdf-page-content .display-table-cell {
+  display: table-cell; }
+#content_editor .vertical-align-middle,
+.pdf-page-content .vertical-align-middle {
+  vertical-align: middle; }
+#content_editor .no-float,
+.pdf-page-content .no-float {
+  float: initial !important; }
+#content_editor strong.white-text,
+.pdf-page-content strong.white-text {
+  color: #fff !important; }
 @media (max-width: 568px) {
     #content_editor h1,
     .pdf-page-content h1 {
@@ -687,11 +737,27 @@ BACK COVER
     padding-left: 0;
     padding-right: 0; }
       #content_editor .grid .unit.half:nth-child(2n),
-      .pdf-page-content .grid .unit.half:nth-child(2n) {
+      .pdf-page-content .grid .unit.half:nth-child(2n),
+      #content_editor .grid .unit.two-fifths:nth-child(2n),
+      .pdf-page-content .grid .unit.two-fifths:nth-child(2n),
+      #content_editor .grid .unit.three-fifths:nth-child(2n),
+      .pdf-page-content .grid .unit.three-fifths:nth-child(2n),
+      #content_editor .grid .unit.golden-large:nth-child(2n),
+      .pdf-page-content .grid .unit.golden-large:nth-child(2n),
+      #content_editor .grid .unit.golden-small:nth-child(2n),
+      .pdf-page-content .grid .unit.golden-small:nth-child(2n) {
         padding-left: 0;
         padding-right: 0; }
     #content_editor .grid .unit.half,
-    .pdf-page-content .grid .unit.half {
+    .pdf-page-content .grid .unit.half,
+    #content_editor .grid .unit.two-fifths,
+    .pdf-page-content .grid .unit.two-fifths,
+    #content_editor .grid .unit.three-fifths,
+    .pdf-page-content .grid .unit.three-fifths,
+    #content_editor .grid .unit.golden-large,
+    .pdf-page-content .grid .unit.golden-large,
+    #content_editor .grid .unit.golden-small,
+    .pdf-page-content .grid .unit.golden-small {
       padding-left: 0;
       padding-right: 0; }
   #content_editor .schwab-box-grid > .grid .half {
@@ -765,4 +831,13 @@ BACK COVER
       display: block; }
     #content_editor .desktop-only,
     .pdf-page-content .desktop-only {
-      display: none; } }
+      display: none; }
+    #content_editor .display-table,
+    .pdf-page-content .display-table {
+      display: block !important; }
+    #content_editor .display-table-cell,
+    .pdf-page-content .display-table-cell {
+      display: block; }
+    #content_editor .no-float,
+    .pdf-page-content .no-float {
+      float: left !important; } }

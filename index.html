@@ -57,7 +57,7 @@
     </div>
 
     <div class="page" id="page-two">
-      <div class="full-page">
+      <div class="full-page schwab-toc-page">
         <div class="light-callout full-container neg-mar-t">
           <div class="grid">
             <div class="unit half">
@@ -138,14 +138,14 @@
         <div class="brand-font-color schwab-graphic-third-container">
           <img src="https://mytinder.s3.amazonaws.com/assets/medias/508834_original.png?1501509680" alt="" class="mobile-only">
           <h6>Schwab</h6>
-          <ul>
-            <li>Safeguarding account assets</li>
-            <li>Array of investment choices</li>
-            <li>Full suite of bank custody and brokerage services</li>
-            <li>Integrated trading platform</li>
-            <li>Contribution processing</li>
-            <li>Trading</li>
-            <li>Benefit payment services</li>
+          <ul class="grid">
+            <li class="unit half">Safeguarding account assets</li>
+            <li class="unit half">Integrated trading platform</li>
+            <li class="unit half">Array of investment choices</li>
+            <li class="unit half">Contribution processing</li>
+            <li class="unit half">Full suite of bank custody and brokerage services</li>
+            <li class="unit half">Trading</li>
+            <li class="unit half">Benefit payment services</li>
           </ul>
         </div>
         <div style="page-break-after: always;"></div>
@@ -153,14 +153,14 @@
     </div>
 
     <div class="page" id="page-four">
-      <div class="grid mar-b">
-        <div class="unit half">
+      <div class="grid mar-b display-table">
+        <div class="unit half display-table-cell vertical-align-middle no-float">
           <div class="brand-box" style="display: inline-block;">
             <h1>The Schwab difference</h1>
           </div>
         </div>
-        <div class="unit half">
-          <ul class="font-shrink" style="margin-top: 2rem;">
+        <div class="unit half display-table-cell vertical-align-middle no-float">
+          <ul class="font-shrink">
             <li>Directed trust and custody services from Charles Schwab Bank®.</li>
             <li>Brokerage products and services from Charles Schwab &amp; Co., Inc.</li>
             <li>Open architecture providing access to an array of investment choices selected by the plan sponsor.</li>
@@ -209,7 +209,7 @@
           </blockquote>
         </div>
       </div>
-      <ol class="footnotes">
+      <ol class="footnotes footnote-1">
         <li>Charles Schwab Bank and Charles Schwab &amp; Co., Inc., are separate but affiliated companies and subsidiaries of The Charles Schwab Corporation.</li>
         <li>The number of brokerage accounts and assets reported are for retirement plans brought to Charles Schwab &amp; Co., Inc. by independent recordkeepers and other parties. These numbers do not include the number of accounts held in Schwab Personal Choice Retirement Accounts® or retirement plans held at Charles Schwab Bank. All data as of January 2017.</li>
         <li>Funds made available through Charles Schwab Bank and/or Charles Schwab &amp; Co., Inc.</li>
@@ -342,7 +342,7 @@
 
     <div class="page" id="page-seven">
       <div class="grid pos-rel">
-        <div class="unit one-third">
+        <div class="unit two-fifths">
           <div class="brand-box" style="display: inline-block;">
             <h1>Commitment to fairness and transparency</h1>
           </div>
@@ -355,25 +355,25 @@
             </ol>
           </div>
         </div>
-        <div class="unit two-thirds">
+        <div class="unit three-fifths">
           <div class="light-gray-box">
             <h1 class="brand-font-color mar-b">Plan assumptions</h1>
             <ul class="no-bull font-shrink">
               <li class="grid">
-                <div class="unit half">Total plan assets</div>
-                <div class="unit half">{{number_to_currency(lead_current_plan_assets__c)}}</div>
+                <div class="unit golden-large">Total plan assets</div>
+                <div class="unit golden-small">{{number_to_currency(lead_current_plan_assets__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Participants in the plan</div>
-                <div class="unit half">{{lead_num_participants__c.to_i}}</div>
+                <div class="unit golden-large">Participants in the plan</div>
+                <div class="unit golden-small">{{lead_num_participants__c.to_i}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Average participant account size</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_avg_participant_account_size__c.to_i)}}</div>
+                <div class="unit golden-large">Average participant account size</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_avg_participant_account_size__c.to_i)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Plan type</div>
-                <div class="unit half">{{Lead_Type_of_Plan__c}}</div>
+                <div class="unit golden-large">Plan type</div>
+                <div class="unit golden-small">{{Lead_Type_of_Plan__c}}</div>
               </li>
             </ul>
             <div class="mar-t mar-b brand-box--multiply pad-a">
@@ -381,31 +381,31 @@
             </div>
             <ul class="no-bull font-shrink">
               <li class="grid">
-                <div class="unit half">Annual base fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_annual_base_fee__c)}}</div>
+                <div class="unit golden-large">Annual base fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_annual_base_fee__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Per participant fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_participant_fees_total__c)}}</div>
+                <div class="unit golden-large">Per participant fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_participant_fees_total__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Asset base fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_asset_base_fee__c)}}</div>
+                <div class="unit golden-large">Asset base fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_asset_base_fee__c)}}</div>
               </li>
             </ul>
             <hr>
             <ul class="no-bull font-shrink">
               <li class="grid">
-                <div class="unit half"><strong>Total recordkeeping fees<sup>5</sup></strong></div>
-                <div class="unit half">{{number_to_currency(lead_octiv_total_recordkeeping_fees__c)}}</div>
+                <div class="unit golden-large"><strong>Total recordkeeping fees<sup>5</sup></strong></div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_total_recordkeeping_fees__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Transition/start-up fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_transition_fee__c)}}</div>
+                <div class="unit golden-large">Transition/start-up fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_transition_fee__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Advisory fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_optional_advisory_fee__c)}}</div>
+                <div class="unit golden-large">Advisory fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_optional_advisory_fee__c)}}</div>
               </li>
             </ul>
             <div class="mar-t mar-b brand-box pad-a">
@@ -418,16 +418,16 @@
             <div class="brand-two-box--lighten pad-a">
               <ul class="no-bull font-shrink">
                 <li class="grid">
-                  <div class="unit half">Total annual estimated fees</div>
-                  <div class="unit half">{{number_to_currency(lead_octiv_total_annual_estimated_fees__c)}}</div>
+                  <div class="unit golden-large">Total annual estimated fees</div>
+                  <div class="unit golden-small">{{number_to_currency(lead_octiv_total_annual_estimated_fees__c)}}</div>
                 </li>
                 <li class="grid">
-                  <div class="unit half"><strong>Total annual cost per participant</strong></div>
-                  <div class="unit half">{{number_to_currency(lead_octiv_total_annual_cost_per_participant__c)}}</div>
+                  <div class="unit golden-large"><strong>Total annual cost per participant</strong></div>
+                  <div class="unit golden-small">{{number_to_currency(lead_octiv_total_annual_cost_per_participant__c)}}</div>
                 </li>
                 <li class="grid">
-                  <div class="unit half">Total fee as % of plan assets</div>
-                  <div class="unit half">{{number_to_currency(lead_octiv_total_fee_as_of_plan_assets__c)}}</div>
+                  <div class="unit golden-large">Total fee as % of plan assets</div>
+                  <div class="unit golden-small">{{number_to_currency(lead_octiv_total_fee_as_of_plan_assets__c)}}</div>
                 </li>
               </ul>
             </div>
@@ -446,103 +446,103 @@
 
     <div class="page" id="page-eight">
       <div class="grid pos-rel">
-        <div class="unit one-third">
+        <div class="unit two-fifths">
           <div class="brand-box" style="display: inline-block;">
             <h1>Commitment to fairness and transparency</h1>
           </div>
           <p>&nbsp;</p>
           <p class="brand-font-color text-is-justified">This transparent pricing schedule is designed to provide you with fee certainty. You also have access to select low-cost, flexible investment options that help meet the needs of your participants. All fees are clear and disclosed—helping you meet your fiduciary responsibilities as a plan sponsor to your employees.</p>
-          <p class="brand-font-color">Mutual fund companies may make payments to Schwab in exchange for a variety of shareholder services.<sup>4</sup> The amounts that are remitted vary by fund. Please consult your independent recordkeeper for additional information.</p>
+          <p class="brand-font-color text-is-justified">Mutual fund companies may make payments to Schwab in exchange for a variety of shareholder services.<sup>4</sup> The amounts that are remitted vary by fund. Please consult your independent recordkeeper for additional information.</p>
           <div class="pos-abs pos-bottom pad-b pad-r print-third" style="max-width: calc(33% - 20px);">
             <ol class="footnotes footnote-4" start="4">
               <li>Charles Schwab Bank® and Charles Schwab &amp; Co., Inc., are separate but affiliated companies and subsidiaries of The Charles Schwab Corporation.</li>
             </ol>
           </div>
         </div>
-        <div class="unit two-thirds">
+        <div class="unit three-fifths">
           <div class="light-gray-box">
             <h1 class="brand-font-color mar-b">Plan assumptions</h1>
             <ul class="no-bull font-shrink">
               <li class="grid">
-                <div class="unit half">Total plan assets</div>
-                <div class="unit half">{{number_to_currency(lead_current_plan_assets__c)}}</div>
+                <div class="unit golden-large">Total plan assets</div>
+                <div class="unit golden-small">{{number_to_currency(lead_current_plan_assets__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Participants in the plan</div>
-                <div class="unit half">{{lead_num_participants__c.to_i}}</div>
+                <div class="unit golden-large">Participants in the plan</div>
+                <div class="unit golden-small">{{lead_num_participants__c.to_i}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Average participant account size</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_avg_participant_account_size__c.to_i)}}</div>
+                <div class="unit golden-large">Average participant account size</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_avg_participant_account_size__c.to_i)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Plan type</div>
-                <div class="unit half">{{Lead_Type_of_Plan__c}}</div>
+                <div class="unit golden-large">Plan type</div>
+                <div class="unit golden-small">{{Lead_Type_of_Plan__c}}</div>
               </li>
             </ul>
             <div class="mar-t mar-b brand-box--multiply pad-a">
-              Independent recordkeeper fees
+              <strong class="white-text">Independent recordkeeper fees</strong>
             </div>
             <ul class="no-bull font-shrink">
               <li class="grid">
-                <div class="unit half">Annual base fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_annual_base_fee__c)}}</div>
+                <div class="unit golden-large">Annual base fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_annual_base_fee__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Per participant fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_participant_fees_total__c)}}</div>
+                <div class="unit golden-large">Per participant fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_participant_fees_total__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Asset base fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_asset_base_fee__c)}}</div>
+                <div class="unit golden-large">Asset base fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_asset_base_fee__c)}}</div>
               </li>
             </ul>
             <hr>
             <ul class="no-bull font-shrink">
               <li class="grid">
-                <div class="unit half"><strong>Total recordkeeping fees<sup>5</sup></strong></div>
-                <div class="unit half">{{number_to_currency(lead_octiv_total_recordkeeping_fees__c)}}</div>
+                <div class="unit golden-large"><strong>Total recordkeeping fees<sup>5</sup></strong></div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_total_recordkeeping_fees__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Transition/start-up fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_transition_fee__c)}}</div>
+                <div class="unit golden-large">Transition/start-up fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_transition_fee__c)}}</div>
               </li>
               <li class="grid">
-                <div class="unit half">Advisory fee</div>
-                <div class="unit half">{{number_to_currency(lead_octiv_optional_advisory_fee__c)}}</div>
+                <div class="unit golden-large">Advisory fee</div>
+                <div class="unit golden-small">{{number_to_currency(lead_octiv_optional_advisory_fee__c)}}</div>
               </li>
             </ul>
             <div class="mar-t brand-box pad-a">
-              Schwab custody
+              <strong class="white-text">Schwab custody</strong>
             </div>
             <div class="brand-box--lighten pad-a">
               <ul class="no-bull font-shrink">
                 <li class="grid">
-                  <div class="unit half">Account base fee</div>
-                  <div class="unit half">{{variable}}</div>
+                  <div class="unit golden-large">Account base fee</div>
+                  <div class="unit golden-small">{{number_to_currency(lead_octiv_account_base_fee__c)}}</div>
                 </li>
                 <li class="grid">
-                  <div class="unit half">Annual market value fee</div>
-                  <div class="unit half">{{variable}}</div>
+                  <div class="unit golden-large">Annual market value fee</div>
+                  <div class="unit golden-small">{{number_to_currency(lead_octiv_annual_market_value_fee__c)}}</div>
                 </li>
               </ul>
             </div>
             <div class="brand-two-box mar-t pad-a">
-              Total fees<sup>6</sup>
+              <strong class="white-text">Total fees</strong><sup>6</sup>
             </div>
             <div class="brand-two-box--lighten pad-a">
               <ul class="no-bull font-shrink">
                 <li class="grid">
-                  <div class="unit half">Total annual estimated fees</div>
-                  <div class="unit half">{{number_to_currency(lead_octiv_total_annual_estimated_fees__c)}}</div>
+                  <div class="unit golden-large">Total annual estimated fees</div>
+                  <div class="unit golden-small">{{number_to_currency(lead_octiv_total_annual_estimated_fees__c)}}</div>
                 </li>
                 <li class="grid">
-                  <div class="unit half"><strong>Total annual cost per participant</strong></div>
-                  <div class="unit half">{{number_to_currency(lead_octiv_total_annual_cost_per_participant__c)}}</div>
+                  <div class="unit golden-large"><strong>Total annual cost per participant</strong></div>
+                  <div class="unit golden-small">{{number_to_currency(lead_octiv_total_annual_cost_per_participant__c)}}</div>
                 </li>
                 <li class="grid">
-                  <div class="unit half">Total fee as % of plan assets</div>
-                  <div class="unit half">{{number_to_currency(lead_octiv_total_fee_as_of_plan_assets__c)}}</div>
+                  <div class="unit golden-large">Total fee as % of plan assets</div>
+                  <div class="unit golden-small">{{number_to_currency(lead_octiv_total_fee_as_of_plan_assets__c)}}</div>
                 </li>
               </ul>
             </div>
@@ -566,7 +566,7 @@
             <h1 class="mar-t">Once you have reviewed this proposal, we’re here to answer any questions you may have.</h1>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <p>For more information, please contact:</p>
+            <p><strong>For more information, please contact:</strong></p>
             <ul class="no-bull font-shrink">
               <li class="grid mar-b">
                 <div class="brand-font-color unit half">Name</div>

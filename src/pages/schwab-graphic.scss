@@ -31,10 +31,7 @@
   }
 }
 .pdf-page-content .schwab-graphic {
-  display: table-cell;
   > * {
-    display: table-cell;
-    vertical-align: middle;
     float: left;
     &:first-child {
       padding-right: 0.25in;
@@ -96,10 +93,10 @@
     display: none;
   }
 }
-.pdf-page-content .schwab-graphic-second-container:before, 
-.pdf-page-content .schwab-graphic-second-container:after {
-  display: none !important;
-}
+// .pdf-page-content .schwab-graphic-second-container:before, 
+// .pdf-page-content .schwab-graphic-second-container:after {
+//   display: none !important;
+// }
 
 .pdf-page-content .schwab-graphic-secondish-container {
   width: 2.25in;
@@ -107,7 +104,7 @@
 
 #content_editor .schwab-graphic-third-container,
 .pdf-page-content .schwab-graphic-third-container {
-  max-width: 50%;
+  max-width: 65%;
   margin: 0.5em auto 0;
   position: relative;
   @include bp(md) {
@@ -133,16 +130,20 @@
       text-align: left;
     }
   }
-  li {
+  li.unit.half {
     font-size: 0.75em !important;
+    padding-left: 0 !important;
   }
 }
 .pdf-page-content .schwab-graphic-third-container {
   margin-top: 0in !important;
-  width: 50%;
-  max-width: 50%;
+  width: 60%;
+  max-width: 60%;
   &:before {
     display: none !important;
+  }
+  li {
+    
   }
 }
 

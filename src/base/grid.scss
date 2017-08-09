@@ -21,7 +21,15 @@ RESETS/OVERRIDES
 }
 
 #content_editor .grid .unit.half,
-.pdf-page-content .grid .unit.half {
+.pdf-page-content .grid .unit.half,
+#content_editor .grid .unit.two-fifths,
+.pdf-page-content .grid .unit.two-fifths,
+#content_editor .grid .unit.three-fifths,
+.pdf-page-content .grid .unit.three-fifths,
+#content_editor .grid .unit.golden-large,
+.pdf-page-content .grid .unit.golden-large,
+#content_editor .grid .unit.golden-small,
+.pdf-page-content .grid .unit.golden-small {
   padding-right: 20px !important;
   &:nth-child(2n) {
     padding-right: 0px !important;

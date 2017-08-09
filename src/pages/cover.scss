@@ -86,6 +86,9 @@
 .pdf-page-content .schwab-cover-content-container [class*="-box"] {
   padding-bottom: 30%;
 }
+.pdf-page-content .schwab-cover-content-container [class*="-box"] {
+  padding-bottom: 1.5in; 
+}
 
 #content_editor .schwab-cover-content-container h1,
 .pdf-page-content .schwab-cover-content-container h1 {
@@ -94,7 +97,7 @@
   line-height: 1 !important;
 }
 .pdf-page-content .schwab-cover-content-container h1 {
-  font-size: 38pt !important;
+  font-size: 42pt !important;
 }
 #content_editor .schwab-cover-content-container h2,
 .pdf-page-content .schwab-cover-content-container h2 {
