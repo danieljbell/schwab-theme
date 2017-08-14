@@ -1,3 +1,9 @@
+/*
+===============================================
+SOURCE FOR THIS CLIENT THEME CAN BE FOUND HERE:
+https://github.com/danieljbell/schwab-theme
+===============================================
+*/
 /* HACK TO THE MAIN FRAME FOR CUSTOMER LOGO */
 div.document-header .document-header-inner .logo-container-wrap .logo-container {
   background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/436185_original.jpg?1487880591) !important; }
@@ -475,6 +481,8 @@ BACK COVER
     padding-right: 1in; }
 .pdf-page-content .schwab-back-cover > .pos-bottom {
     top: 9in; }
+#content_editor .schwab-back-cover .schwab-logo {
+  margin-top: 2em; }
 #content_editor .schwab-toc-page {
   min-height: 850px; }
 .pdf-page-content .schwab-toc-page h1 {
@@ -774,12 +782,6 @@ BACK COVER
   #content_editor .schwab-box-grid > .grid .half {
     padding-right: 0 !important;
     margin-bottom: calc(35% + 1rem); }
-    #content_editor .schwab-cover,
-    .pdf-page-content .schwab-cover {
-      background-position: -250px -100px;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-bottom: 0; }
     #content_editor .schwab-cover-bg,
     .pdf-page-content .schwab-cover-bg {
       opacity: 0.35;
@@ -808,6 +810,12 @@ BACK COVER
   .pdf-page-content .no-abs-mobile {
     position: relative; } }
 @media (max-width: 767px) {
+    #content_editor .schwab-cover,
+    .pdf-page-content .schwab-cover {
+      background-position: -250px -100px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 0; }
     #content_editor .schwab-graphic,
     .pdf-page-content .schwab-graphic {
       -webkit-box-orient: vertical;
@@ -853,3 +861,6 @@ BACK COVER
     #content_editor .no-float,
     .pdf-page-content .no-float {
       float: left !important; } }
+@media screen and (max-width: 1200px) {
+  .build-view #content_editor .schwab-cover .grid > .unit.half {
+    min-width: 100%; } }

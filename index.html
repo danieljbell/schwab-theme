@@ -279,7 +279,7 @@
     </div>
 
     <div class="page" id="page-six">
-      <div class="full-page light-page neg-mar-t">
+      <div class="full-page light-page neg-mar-t independent-recordkeeper">
         <div class="grid pos-rel">
           <div class="unit one-third">
             <table class="schwab-table">
@@ -301,7 +301,7 @@
                 </tr>
               </tbody>
             </table>
-            <div class="pos-abs pos-bottom desktop-only">
+            <div class="pos-abs pos-bottom no-abs-mobile no-print desktop-only" style="bottom: 4em;">
               <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="client-logo no-print">
             </div>
           </div>
@@ -335,11 +335,24 @@
         </div>
         <div class="pos-abs pos-bottom pad-b pad-r no-abs-mobile neg-mar-t">
           <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="mobile-only client-logo">
-          <ol class="footnotes no-bull footnote-no-number" style="max-width: 50%;">
+          <ol class="footnotes no-bull footnote-no-number">
             <li>The independent recordkeeper, not Schwab, listed above is solely responsible for the description of the recordkeeping services and accuracy of the firm content contained in this information sheet. The recordkeeper is independent of Schwab and is not employed by Schwab or acting as Schwab’s agent.</li>
           </ol>
         </div>
       </div>
+      <style>
+        .footnotes {
+          max-width: 100%;
+        }
+        @media screen and (min-width: 600px) {
+          .footnotes {
+            max-width: 33%;
+          } 
+        }
+        .pdf-page-content .independent-recordkeeper .footnotes {
+          max-width: 3in;
+        }
+      </style>
     </div>
 
     <div class="page" id="page-seven">

@@ -15,7 +15,7 @@
   background-size: 1190px;
   background-position: -75px -140px;
   margin-bottom: 100px;
-  @include bp(sm) {
+  @include bp(md) {
     background-position: -250px -100px;
     padding-left: 20px;
     padding-right: 20px;
@@ -26,6 +26,12 @@
   padding: 0;
   margin-bottom: -0.5in;
   min-height: 9.5in;
+}
+
+@media screen and (max-width: 1200px) {
+  .build-view #content_editor .schwab-cover .grid > .unit.half {
+    min-width: 100%;
+  }
 }
 
 #content_editor .schwab-cover-bg,
@@ -166,4 +172,8 @@ BACK COVER
   > .pos-bottom {
     top: 9in;
   }
+}
+
+#content_editor .schwab-back-cover .schwab-logo {
+  margin-top: 2em;
 }
