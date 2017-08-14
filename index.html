@@ -109,7 +109,7 @@
         <div class="schwab-graphic">
           <div class="brand-two-font-color schwab-graphic-first-container">
             <img src="https://mytinder.s3.amazonaws.com/assets/medias/508836_original.png?1501509680" alt="" class="mobile-only">
-            <h6>Your independent advisor of choice</h6>
+            <h6><strong>Your independent advisor of choice</strong></h6>
             <ul>
               <li>Investment selection</li>
               <li>Performance monitoring</li>
@@ -137,15 +137,15 @@
         </div>
         <div class="brand-font-color schwab-graphic-third-container">
           <img src="https://mytinder.s3.amazonaws.com/assets/medias/508834_original.png?1501509680" alt="" class="mobile-only">
-          <h6>Schwab</h6>
-          <ul class="grid">
-            <li class="unit half">Safeguarding account assets</li>
-            <li class="unit half">Integrated trading platform</li>
-            <li class="unit half">Array of investment choices</li>
-            <li class="unit half">Contribution processing</li>
-            <li class="unit half">Full suite of bank custody and brokerage services</li>
-            <li class="unit half">Trading</li>
-            <li class="unit half">Benefit payment services</li>
+          <h6><strong>Schwab</strong></h6>
+          <ul class="custom-half">
+            <li>Safeguarding account assets</li>
+            <li>Integrated trading platform</li>
+            <li>Array of investment choices</li>
+            <li>Contribution processing</li>
+            <li>Full suite of bank custody and brokerage services</li>
+            <li>Trading</li>
+            <li>Benefit payment services</li>
           </ul>
         </div>
         <div style="page-break-after: always;"></div>
@@ -155,7 +155,7 @@
     <div class="page" id="page-four">
       <div class="grid mar-b display-table">
         <div class="unit half display-table-cell vertical-align-middle no-float">
-          <div class="brand-box" style="display: inline-block;">
+          <div class="brand-box" style="display: inline-block; max-width: 245px; padding-bottom: 50%;">
             <h1>The Schwab difference</h1>
           </div>
         </div>
@@ -302,7 +302,7 @@
               </tbody>
             </table>
             <div class="pos-abs pos-bottom desktop-only">
-              <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="client-logo">
+              <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="client-logo no-print">
             </div>
           </div>
           <div class="unit two-thirds">
@@ -333,10 +333,12 @@
             </ul>
           </div>
         </div>
-        <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="mobile-only client-logo">
-        <ol class="footnotes no-bull footnote-no-number" style="max-width: 50%;">
-          <li>The independent recordkeeper, not Schwab, listed above is solely responsible for the description of the recordkeeping services and accuracy of the firm content contained in this information sheet. The recordkeeper is independent of Schwab and is not employed by Schwab or acting as Schwab’s agent.</li>
-        </ol>
+        <div class="pos-abs pos-bottom pad-b pad-r no-abs-mobile neg-mar-t">
+          <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="mobile-only client-logo">
+          <ol class="footnotes no-bull footnote-no-number" style="max-width: 50%;">
+            <li>The independent recordkeeper, not Schwab, listed above is solely responsible for the description of the recordkeeping services and accuracy of the firm content contained in this information sheet. The recordkeeper is independent of Schwab and is not employed by Schwab or acting as Schwab’s agent.</li>
+          </ol>
+        </div>
       </div>
     </div>
 
@@ -462,7 +464,7 @@
         <div class="unit three-fifths">
           <div class="light-gray-box">
             <h1 class="brand-font-color mar-b">Plan assumptions</h1>
-            <ul class="no-bull font-shrink">
+            <ul class="no-bull">
               <li class="grid">
                 <div class="unit golden-large">Total plan assets</div>
                 <div class="unit golden-small">{{number_to_currency(lead_current_plan_assets__c)}}</div>
@@ -483,7 +485,7 @@
             <div class="mar-t mar-b brand-box--multiply pad-a">
               <strong class="white-text">Independent recordkeeper fees</strong>
             </div>
-            <ul class="no-bull font-shrink">
+            <ul class="no-bull">
               <li class="grid">
                 <div class="unit golden-large">Annual base fee</div>
                 <div class="unit golden-small">{{number_to_currency(lead_octiv_annual_base_fee__c)}}</div>
@@ -498,7 +500,7 @@
               </li>
             </ul>
             <hr>
-            <ul class="no-bull font-shrink">
+            <ul class="no-bull">
               <li class="grid">
                 <div class="unit golden-large"><strong>Total recordkeeping fees<sup>5</sup></strong></div>
                 <div class="unit golden-small">{{number_to_currency(lead_octiv_total_recordkeeping_fees__c)}}</div>
@@ -516,7 +518,7 @@
               <strong class="white-text">Schwab custody</strong>
             </div>
             <div class="brand-box--lighten pad-a">
-              <ul class="no-bull font-shrink">
+              <ul class="no-bull">
                 <li class="grid">
                   <div class="unit golden-large">Account base fee</div>
                   <div class="unit golden-small">{{number_to_currency(lead_octiv_account_base_fee__c)}}</div>
@@ -531,7 +533,7 @@
               <strong class="white-text">Total fees</strong><sup>6</sup>
             </div>
             <div class="brand-two-box--lighten pad-a">
-              <ul class="no-bull font-shrink">
+              <ul class="no-bull">
                 <li class="grid">
                   <div class="unit golden-large">Total annual estimated fees</div>
                   <div class="unit golden-small">{{number_to_currency(lead_octiv_total_annual_estimated_fees__c)}}</div>
@@ -589,7 +591,7 @@
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <div class="pos-abs pos-bottom pad-b pad-r no-abs-mobile grid">
+            <div class="pos-abs pos-bottom pad-b pad-r no-abs-mobile grid neg-mar-t">
               <ol class="unit half footnotes footnote-no-number" style="list-style-type: none; padding-left: 0 !important;">
                 <li>The independent recordkeeper, not Schwab, is solely responsible for the description of the recordkeeping services and fees. Schwab, not the independent recordkeeper, is solely responsible for the description of the custody and related services and fees. You must negotiate with and retain each separately. The plan sponsor is responsible for conducting its own due diligence on the independent recordkeeper.</li>
               </ol>

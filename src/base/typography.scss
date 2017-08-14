@@ -33,11 +33,6 @@
   font-weight: 400 !important;
 }
 
-#content_editor h6,
-.pdf-page-content h6 {
-  font-weight: 600 !important;
-}
-
 #content_editor p,
 .pdf-page-content p {
   @include bp(sm) {
@@ -116,12 +111,8 @@
   margin-bottom: 1em !important;
 }
 .pdf-page-content hr {
-  background-color: initial !important;
-  border: initial !important;
-  height: initial !important;
-  width: initial !important;
-  margin-top: initial !important;
-  margin-bottom: initial !important;
+  display: block !important;
+  border-top: 2px solid $brand-font-color !important;
 }
 
 #content_editor sup,
@@ -157,7 +148,6 @@
 }
 .pdf-page-content .footnotes {
   font-size: 0.45em !important;
-  padding-left: 0.2in !important;
   margin-top: 0.125in;
 }
 

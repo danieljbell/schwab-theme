@@ -93,10 +93,6 @@
     display: none;
   }
 }
-// .pdf-page-content .schwab-graphic-second-container:before, 
-// .pdf-page-content .schwab-graphic-second-container:after {
-//   display: none !important;
-// }
 
 .pdf-page-content .schwab-graphic-secondish-container {
   width: 2.25in;
@@ -130,20 +126,23 @@
       text-align: left;
     }
   }
-  li.unit.half {
+  li {
+    width: 45%;
+    margin-right: 2.5%;
+    float: left;
     font-size: 0.75em !important;
-    padding-left: 0 !important;
   }
 }
 .pdf-page-content .schwab-graphic-third-container {
   margin-top: 0in !important;
-  width: 60%;
-  max-width: 60%;
+  margin-left: 2in;
+  width: 55%;
+  max-width: 55%;
   &:before {
     display: none !important;
   }
-  li {
-    
+  h6 {
+    margin-left: -0.5in;
   }
 }
 

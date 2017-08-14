@@ -48,6 +48,9 @@
   margin-top: -0.5in !important;
   padding-top: 0.75in !important;
 }
+.pdf-page-content .pos-bottom.neg-mar-t {
+  padding-bottom: 0.5in !important;
+}
 
 #content_editor .mar-r,
 .pdf-page-content .mar-r {
@@ -161,6 +164,10 @@
   @include bp(md) {
     display: none;
   }
+}
+
+.pdf-page-content .mobile-only.client-logo {
+  display: block !important;
 }
 
 .pdf-page-content .print-third {

@@ -44,7 +44,9 @@ RESETS/OVERRIDES
     padding-right: 0;
   }
 }
-.pdf-page-content .grid .unit.half {
+.pdf-page-content .grid .unit.half,
+.pdf-page-content .grid .unit.golden-large,
+.pdf-page-content .grid .unit.golden-small {
   padding-right: 0.125in !important;
   &:nth-child(2n) {
     padding-right: 0in !important;
@@ -102,6 +104,12 @@ RESETS/OVERRIDES
 .pdf-page-content .schwab-box-grid > .grid > * {
   max-height: 185px;
   border-top: 15px solid #fff;
+  &:first-child {
+    padding-right: 10px !important;
+  }
+  &:last-child {
+    padding-left: 10px !important;
+  }
 }
 .pdf-page-content .schwab-box-grid > .grid > * {
   max-height: 1.75in;
