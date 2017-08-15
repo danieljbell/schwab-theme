@@ -221,7 +221,7 @@
 
     <div class="page" id="page-five">
       <div class="full-page light-page">
-        <div class="grid full-container neg-mar-t" style="background-color: #fff;">
+        <div class="grid full-container neg-mar-t pos-rel" style="background-color: #fff; z-index: 0;">
           <div class="unit one-quarter"> 
             <img src="https://mytinder.s3.amazonaws.com/assets/medias/447478_original.png?1490126379" alt="" class="mar-b">
           </div>
@@ -229,7 +229,7 @@
             <p class="brand-font-color font-bump text-is-justified">Schwab believes in the power of collaboration—and the benefits that independent recordkeepers deliver to the retirement planning process. We invite you to leverage our established relationships with a network of retirement professionals to help connect you with the expertise and experience you need. Schwab is pleased to provide you with an introduction to the select independent recordkeeper below for your consideration.</p>
           </div>
         </div>
-        <div class="full-container neg-mar-t-more mar-b-negative">
+        <div class="full-container neg-mar-t-more mar-b-negative pos-rel" style="z-index: 2;">
           <h2 class="brand-three-font-color mar-b">{{Lead_Lead_Owner_Organization_Name__r_octiv_Firm_Name_Proposals__c}} Firm Profile</h2>
           <div class="grid pos-rel">
             <div class="unit two-fifths">
@@ -254,7 +254,7 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="pos-abs pos-bottom desktop-only">
+              <div class="pos-abs pos-bottom desktop-only no-print">
                 <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="client-logo">
               </div>
             </div>
@@ -276,8 +276,18 @@
             </div>
           </div>
         </div>
-        <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="mobile-only client-logo">
+        <div class="schwab-no-print">
+          <img src="https://mytinder.s3.amazonaws.com/assets/medias/510148_original.jpg?1501704222" alt="" class="mobile-only client-logo">
+        </div>
       </div>
+      <style>
+        .pdf-page-content .grid.full-container.neg-mar-t.pos-rel {
+          padding-bottom: 0;
+        }
+        .pdf-page-content .schwab-no-print {
+          display: none !important;
+        }
+      </style>
     </div>
 
     <div class="page" id="page-six">
