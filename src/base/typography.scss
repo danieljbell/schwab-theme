@@ -1,12 +1,13 @@
 #content_editor h1,
 .pdf-page-content h1 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 300 !important;
   color: $brand !important;
-  // font-size: calc(16px + 3vw) !important;
+  font-size: 26px !important;
+  line-height: 1.3 !important;
   @include bp(sm) {
     font-size: 28px !important;
-    line-height: 1.2 !important;
+    line-height: 1.4 !important;
   }
 }
 .pdf-page-content h1 {

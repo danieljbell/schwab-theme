@@ -83,6 +83,12 @@
 #content_editor .pad-r,
 .pdf-page-content .pad-r {
   padding-right: 0.5em !important;
+  &-more {
+    padding-right: 5em !important;
+    @include bp(sm) {
+      padding-right: 3em !important;
+    }
+  }
 }
 
 #content_editor .pad-b,
@@ -128,6 +134,10 @@
 .pdf-page-content .font-bump {
   font-size: 1.15em !important;
   line-height: 1.4 !important;
+  &.text-is-justified {
+    font-size: 1.05em !important;
+    line-height: 1.4 !important;
+  }
 }
 
 #content_editor .font-shrink,
