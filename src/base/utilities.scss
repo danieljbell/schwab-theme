@@ -51,6 +51,10 @@
 .pdf-page-content .pos-bottom.neg-mar-t {
   padding-bottom: 0.5in !important;
 }
+.pdf-page-content .neg-mar-t-more {
+  margin-top: -1in !important;
+  padding-top: 1.25in !important;
+}
 
 #content_editor .mar-r,
 .pdf-page-content .mar-r {
@@ -63,6 +67,19 @@
   &-negative {
     margin-bottom: -20px !important;
   }
+}
+.pdf-page-content .mar-b {
+  &-negative {
+    margin-bottom: -1in !important;
+  }
+}
+
+// horrible selector for core services page
+.pdf-page-content .full-container.neg-mar-t-more.mar-b-negative.pos-rel {
+  margin-top: -1in !important;
+  // top: -1in !important;
+  position: relative !important;
+  z-index: 100 !important;
 }
 
 #content_editor .mar-l,

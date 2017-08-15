@@ -1,0 +1,18 @@
+.schwab-blockquote {
+  position: relative;
+  blockquote {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 40px);
+    width: 100%; 
+    @include bp(sm) {
+      position: relative;
+      top: initial;
+      left: initial;
+      width: 100%; 
+    }
+    .pdf-page-content & {
+      left: 3.9in;
+    }
+  }
+}

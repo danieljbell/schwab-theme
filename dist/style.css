@@ -266,6 +266,15 @@ RESETS/OVERRIDES
 #content_editor .light-gray-box .brand-three-callout,
 .pdf-page-content .light-gray-box .brand-three-callout {
   color: #fff !important; }
+.schwab-blockquote {
+  position: relative; }
+.schwab-blockquote blockquote {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 40px);
+    width: 100%; }
+.pdf-page-content .schwab-blockquote blockquote {
+      left: 3.9in; }
 #content_editor .brand-box,
 .pdf-page-content .brand-box, #content_editor .brand-box--lighten,
 .pdf-page-content .brand-box--lighten, #content_editor .brand-box--multiply,
@@ -654,6 +663,9 @@ BACK COVER
   padding-top: 0.75in !important; }
 .pdf-page-content .pos-bottom.neg-mar-t {
   padding-bottom: 0.5in !important; }
+.pdf-page-content .neg-mar-t-more {
+  margin-top: -1in !important;
+  padding-top: 1.25in !important; }
 #content_editor .mar-r,
 .pdf-page-content .mar-r {
   margin-right: 20px !important; }
@@ -663,6 +675,12 @@ BACK COVER
 #content_editor .mar-b-negative,
   .pdf-page-content .mar-b-negative {
     margin-bottom: -20px !important; }
+.pdf-page-content .mar-b-negative {
+  margin-bottom: -1in !important; }
+.pdf-page-content .full-container.neg-mar-t-more.mar-b-negative.pos-rel {
+  margin-top: -1in !important;
+  position: relative !important;
+  z-index: 100 !important; }
 #content_editor .mar-l,
 .pdf-page-content .mar-l {
   margin-bottom: 20px !important; }
@@ -795,6 +813,11 @@ BACK COVER
   #content_editor .schwab-box-grid > .grid .half {
     padding-right: 0 !important;
     margin-bottom: calc(35% + 1rem); }
+      .schwab-blockquote blockquote {
+        position: relative;
+        top: initial;
+        left: initial;
+        width: 100%; }
     #content_editor .schwab-cover-bg,
     .pdf-page-content .schwab-cover-bg {
       opacity: 0.35;
