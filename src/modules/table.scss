@@ -31,4 +31,9 @@
   text-align: center;
   margin: 0 auto;
   display: block;
+  width: 100%;
+  max-width: 300px !important;
+}
+.pdf-page-content .schwab-table img {
+  max-width: 100% !important;
 }

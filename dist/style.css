@@ -246,7 +246,11 @@ RESETS/OVERRIDES
 .pdf-page-content .schwab-table img {
   text-align: center;
   margin: 0 auto;
-  display: block; }
+  display: block;
+  width: 100%;
+  max-width: 300px !important; }
+.pdf-page-content .schwab-table img {
+  max-width: 100% !important; }
 #content_editor .full-container,
 .pdf-page-content .full-container {
   margin-left: -30px;
@@ -479,7 +483,7 @@ BACK COVER
 */
 #content_editor .schwab-back-cover,
 .pdf-page-content .schwab-back-cover {
-  min-height: 700px; }
+  min-height: 800px; }
 #content_editor .schwab-back-cover > div:last-child,
   .pdf-page-content .schwab-back-cover > div:last-child {
     padding-right: 30px; }
@@ -498,6 +502,8 @@ BACK COVER
     top: 9in; }
 #content_editor .schwab-back-cover .schwab-logo {
   margin-top: 2em; }
+#content_editor .schwab-back-cover .schwab-logo-tagline {
+  margin-bottom: 0; }
 #content_editor .schwab-toc-page {
   min-height: 850px; }
 .pdf-page-content .schwab-toc-page h1 {
@@ -576,6 +582,9 @@ BACK COVER
     height: 1px;
     background-color: #005f83;
     left: calc(100%); }
+#content_editor .schwab-graphic-secondish-container p,
+.pdf-page-content .schwab-graphic-secondish-container p {
+  line-height: 1.4 !important; }
 .pdf-page-content .schwab-graphic-secondish-container {
   width: 2.25in; }
 #content_editor .schwab-graphic-third-container,
@@ -599,10 +608,13 @@ BACK COVER
   .pdf-page-content .schwab-graphic-third-container h6 {
     font-size: 0.8em !important;
     text-align: center; }
+#content_editor .schwab-graphic-third-container ul,
+  .pdf-page-content .schwab-graphic-third-container ul {
+    margin-left: 1.5em !important; }
 #content_editor .schwab-graphic-third-container li,
   .pdf-page-content .schwab-graphic-third-container li {
-    width: 45%;
-    margin-right: 2.5%;
+    width: calc(50% - 1em);
+    margin-right: 1em;
     float: left;
     font-size: 0.75em !important; }
 .pdf-page-content .schwab-graphic-third-container {
@@ -614,6 +626,9 @@ BACK COVER
     display: none !important; }
 .pdf-page-content .schwab-graphic-third-container h6 {
     margin-left: -0.5in; }
+.pdf-page-content .schwab-graphic-third-container li {
+    width: 45%;
+    margin-right: 2.5%; }
 #content_editor [class*="schwab-graphic"] img,
 .pdf-page-content [class*="schwab-graphic"] img {
   width: 100%;

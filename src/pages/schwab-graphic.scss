@@ -94,6 +94,11 @@
   }
 }
 
+#content_editor .schwab-graphic-secondish-container p,
+.pdf-page-content .schwab-graphic-secondish-container p {
+  line-height: 1.4 !important;
+}
+
 .pdf-page-content .schwab-graphic-secondish-container {
   width: 2.25in;
 }
@@ -126,9 +131,12 @@
       text-align: left;
     }
   }
+  ul {
+    margin-left: 1.5em !important;
+  }
   li {
-    width: 45%;
-    margin-right: 2.5%;
+    width: calc(50% - 1em);
+    margin-right: 1em;
     float: left;
     font-size: 0.75em !important;
   }
@@ -143,6 +151,10 @@
   }
   h6 {
     margin-left: -0.5in;
+  }
+  li {
+    width: 45%;
+    margin-right: 2.5%;
   }
 }
 

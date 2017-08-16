@@ -145,7 +145,7 @@ BACK COVER
 */
 #content_editor .schwab-back-cover,
 .pdf-page-content .schwab-back-cover {
-  min-height: 700px;
+  min-height: 800px;
   > div:last-child {
     padding-right: 30px;
   }
@@ -180,4 +180,8 @@ BACK COVER
 
 #content_editor .schwab-back-cover .schwab-logo {
   margin-top: 2em;
+}
+
+#content_editor .schwab-back-cover .schwab-logo-tagline {
+  margin-bottom: 0;
 }
