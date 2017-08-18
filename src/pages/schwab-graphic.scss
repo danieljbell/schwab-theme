@@ -57,6 +57,13 @@
   }
 }
 
+#content_editor .schwab-graphic-first-container {
+  order: 0;
+  @include bp(md) {
+    order: 2;
+  }
+}
+
 #content_editor .schwab-graphic-first-container,
 .pdf-page-content .schwab-graphic-first-container {
   position: relative;
@@ -91,6 +98,13 @@
   }
   @include bp(md) {
     display: none;
+  }
+}
+
+#content_editor .schwab-graphic-secondish-container {
+  order: 0;
+  @include bp(md) {
+    order: 1;
   }
 }
 
@@ -133,12 +147,19 @@
   }
   ul {
     margin-left: 1.5em !important;
+    @include bp(md) {
+      margin-left: 0 !important;
+    }
   }
   li {
     width: calc(50% - 1em);
     margin-right: 1em;
     float: left;
     font-size: 0.75em !important;
+    @include bp(md) {
+      width: 100%;
+      float: none;
+    }
   }
 }
 .pdf-page-content .schwab-graphic-third-container {

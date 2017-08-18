@@ -549,6 +549,11 @@ BACK COVER
   line-height: 0; }
 .pdf-page-content .schwab-graphic:after {
   clear: both; }
+#content_editor .schwab-graphic-first-container {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+      -ms-flex-order: 0;
+          order: 0; }
 #content_editor .schwab-graphic-first-container,
 .pdf-page-content .schwab-graphic-first-container {
   position: relative; }
@@ -582,6 +587,11 @@ BACK COVER
     height: 1px;
     background-color: #005f83;
     left: calc(100%); }
+#content_editor .schwab-graphic-secondish-container {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+      -ms-flex-order: 0;
+          order: 0; }
 #content_editor .schwab-graphic-secondish-container p,
 .pdf-page-content .schwab-graphic-secondish-container p {
   line-height: 1.4 !important; }
@@ -886,9 +896,19 @@ BACK COVER
   #content_editor [class*="schwab-graphic"],
   .pdf-page-content [class*="schwab-graphic"] {
     margin-bottom: 2em; }
+    #content_editor .schwab-graphic-first-container {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; }
     #content_editor .schwab-graphic-second-container,
     .pdf-page-content .schwab-graphic-second-container {
       display: none; }
+    #content_editor .schwab-graphic-secondish-container {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; }
     #content_editor .schwab-graphic-third-container,
     .pdf-page-content .schwab-graphic-third-container {
       max-width: 100%; }
@@ -898,6 +918,13 @@ BACK COVER
       #content_editor .schwab-graphic-third-container h6,
       .pdf-page-content .schwab-graphic-third-container h6 {
         text-align: left; }
+      #content_editor .schwab-graphic-third-container ul,
+      .pdf-page-content .schwab-graphic-third-container ul {
+        margin-left: 0 !important; }
+      #content_editor .schwab-graphic-third-container li,
+      .pdf-page-content .schwab-graphic-third-container li {
+        width: 100%;
+        float: none; }
     #content_editor .schwab-graphic-third-container img {
       margin-bottom: 2em !important; }
     #content_editor .mobile-only,
