@@ -18,6 +18,17 @@
   content: '';
 }
 
+#content_editor .brand-box-image,
+.pdf-page-content .brand-box-image {
+  max-width: 250px !important;
+  @include bp(sm) {
+    max-width: 100% !important;
+  }
+}
+.pdf-page-content .brand-box-image {
+  max-width: 2.25in !important;
+}
+
 #content_editor .brand-box,
 .pdf-page-content .brand-box {
   @extend %box;
@@ -100,7 +111,7 @@
 SCHWAB BOX DEFAULTS
 ==============================
 */
-#content_editor [class*='-box'],
-.pdf-page-content [class*='-box'] {
+#content_editor .light-gray-box,
+.pdf-page-content .light-gray-box {
   padding-bottom: 55%;
 }

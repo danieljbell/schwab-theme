@@ -206,19 +206,20 @@ RESETS/OVERRIDES
 .pdf-page-content .grid .unit.three-quarters {
   padding-left: 0.125in; }
 /* Overides for custom box grid */
+.schwab-box-grid img {
+  width: 100%; }
+#content_editor .schwab-box-grid > .grid .half:last-child {
+  margin-bottom: 10px; }
 #content_editor .schwab-box-grid > .grid,
 .pdf-page-content .schwab-box-grid > .grid {
   overflow: hidden; }
-#content_editor .schwab-box-grid > .grid > *,
-.pdf-page-content .schwab-box-grid > .grid > * {
-  max-height: 185px;
-  border-top: 15px solid #fff; }
 #content_editor .schwab-box-grid > .grid > *:first-child,
-  .pdf-page-content .schwab-box-grid > .grid > *:first-child {
-    padding-right: 10px !important; }
+.pdf-page-content .schwab-box-grid > .grid > *:first-child {
+  padding-right: 10px !important;
+  margin-bottom: 10px; }
 #content_editor .schwab-box-grid > .grid > *:last-child,
-  .pdf-page-content .schwab-box-grid > .grid > *:last-child {
-    padding-left: 10px !important; }
+.pdf-page-content .schwab-box-grid > .grid > *:last-child {
+  padding-left: 10px !important; }
 .pdf-page-content .schwab-box-grid > .grid > * {
   max-height: 1.75in; }
 #content_editor .schwab-table,
@@ -315,6 +316,11 @@ RESETS/OVERRIDES
   bottom: 0;
   z-index: -1;
   content: ''; }
+#content_editor .brand-box-image,
+.pdf-page-content .brand-box-image {
+  max-width: 250px !important; }
+.pdf-page-content .brand-box-image {
+  max-width: 2.25in !important; }
 #content_editor .brand-box:after,
 .pdf-page-content .brand-box:after {
   background-color: #0ea0db; }
@@ -367,8 +373,8 @@ RESETS/OVERRIDES
 SCHWAB BOX DEFAULTS
 ==============================
 */
-#content_editor [class*='-box'],
-.pdf-page-content [class*='-box'] {
+#content_editor .light-gray-box,
+.pdf-page-content .light-gray-box {
   padding-bottom: 55%; }
 #content_editor .full-page,
 .pdf-page-content .full-page {
@@ -834,15 +840,20 @@ BACK COVER
     #content_editor .grid .unit.golden-small,
     .pdf-page-content .grid .unit.golden-small {
       padding-left: 0;
-      padding-right: 0; }
+      padding-right: 0 !important; }
   #content_editor .schwab-box-grid > .grid .half {
-    padding-right: 0 !important;
-    margin-bottom: calc(35% + 1rem); }
+    padding-right: 0 !important; }
+    #content_editor .schwab-box-grid > .grid > *:last-child,
+    .pdf-page-content .schwab-box-grid > .grid > *:last-child {
+      padding-left: 0px !important; }
       .schwab-blockquote blockquote {
         position: relative;
         top: initial;
         left: initial;
         width: 100%; }
+    #content_editor .brand-box-image,
+    .pdf-page-content .brand-box-image {
+      max-width: 100% !important; }
     #content_editor .schwab-cover-bg,
     .pdf-page-content .schwab-cover-bg {
       opacity: 0.35;
