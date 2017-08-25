@@ -318,6 +318,7 @@ RESETS/OVERRIDES
   content: ''; }
 #content_editor .brand-box-image,
 .pdf-page-content .brand-box-image {
+  width: 100% !important;
   max-width: 250px !important; }
 .pdf-page-content .brand-box-image {
   max-width: 2.25in !important; }
@@ -739,6 +740,8 @@ BACK COVER
 #content_editor .pos-abs,
 .pdf-page-content .pos-abs {
   position: absolute; }
+#content_editor .no-abs-screen {
+  position: relative; }
 #content_editor .pos-bottom,
 .pdf-page-content .pos-bottom {
   bottom: 0; }

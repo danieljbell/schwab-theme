@@ -135,6 +135,10 @@
   }
 }
 
+#content_editor .no-abs-screen {
+  position: relative;
+}
+
 #content_editor .pos-bottom,
 .pdf-page-content .pos-bottom {
   bottom: 0;

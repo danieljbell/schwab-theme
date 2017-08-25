@@ -20,6 +20,7 @@
 
 #content_editor .brand-box-image,
 .pdf-page-content .brand-box-image {
+  width: 100% !important;
   max-width: 250px !important;
   @include bp(sm) {
     max-width: 100% !important;
