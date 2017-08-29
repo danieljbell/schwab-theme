@@ -175,6 +175,7 @@
 
 #content_editor img.client-logo,
 .pdf-page-content img.client-logo {
+  max-height: 100px !important;
   max-width: 200px !important;
 }
 

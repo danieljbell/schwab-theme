@@ -770,6 +770,7 @@ BACK COVER
   margin-bottom: 0.0625in; }
 #content_editor img.client-logo,
 .pdf-page-content img.client-logo {
+  max-height: 100px !important;
   max-width: 200px !important; }
 #content_editor .mobile-only,
 .pdf-page-content .mobile-only {
