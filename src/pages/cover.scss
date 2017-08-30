@@ -185,3 +185,39 @@ BACK COVER
 #content_editor .schwab-back-cover .schwab-logo-tagline {
   margin-bottom: 0;
 }
+
+#content_editor .back-cover-flex {
+  display: flex;
+  position: initial !important;
+  flex-direction: column;
+  align-items: center;
+  > * {
+    position: initial !important;
+    width: initial !important;
+    padding: 0 !important;
+    &:last-child {
+      order: -1;
+      margin-top: 6rem;
+      margin-bottom: 21rem;
+      @include bp(sm) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  img:first-child {
+    width: 50% !important;
+    max-width: 200px !important;
+    left: 50%;
+    @include bp(sm) {
+      width: 100% !important;
+      left: 15%;
+    }
+  }
+  img:last-child {
+    max-width: 320px !important; 
+    @include bp(sm) {
+      max-width: initial !important; 
+    }
+  }
+}
