@@ -226,6 +226,9 @@ RESETS/OVERRIDES
 .pdf-page-content .schwab-table {
   border: 0px !important;
   margin-bottom: 20px; }
+#content_editor .schwab-table + div,
+  .pdf-page-content .schwab-table + div {
+    bottom: 5em !important; }
 #content_editor .schwab-table thead th,
 .pdf-page-content .schwab-table thead th {
   text-align: left !important;

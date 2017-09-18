@@ -2,6 +2,9 @@
 .pdf-page-content .schwab-table {
   border: 0px !important;
   margin-bottom: 20px;
+  & + div {
+    bottom: 5em !important;
+  }
 }
 
 #content_editor .schwab-table thead th,
